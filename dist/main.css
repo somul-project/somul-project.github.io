@@ -33,3 +33,16 @@ h1.label.margin_library {
 h1.label.margin_default {
     margin-top: 3em;
 }
+
+.contributor {
+    position: absolute;
+    left: 10px;
+    bottom: 13px;
+    font-size: 1.1em;
+}
+
+.contributor a{
+  color : #FFF;
+}
+
+
