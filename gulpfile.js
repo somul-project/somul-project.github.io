@@ -34,13 +34,13 @@ gulp.task('scripts', function() {
         .pipe(source('bundle.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(uglify({
-            compress: {
-				global_defs: {
-					DEBUG: false
-				}
-            }
-        })).on('error', gutil.log)
+		// .pipe(uglify({
+  //           compress: {
+		// 		global_defs: {
+		// 			DEBUG: false
+		// 		}
+  //           }
+  //       })).on('error', gutil.log)
         .pipe(sourcemaps.write('.'))
 		.pipe(rename('bundle.min.js'))
 		.pipe(gulp.dest(dirs.dest));

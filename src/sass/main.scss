@@ -43,12 +43,16 @@ strong {
     height: 100%;
     max-height: 100%;
     background-color: white;
+    border-bottom: 1px solid $line-color;
     
     #splash-image {
         height: 100%;
         background-color: white;
         background: url('../images/background.png') center no-repeat;
         background-size: cover;
+        background-position: center center;
+        transition: 0s ease;
+        transform: translate3d(0, 0, 0);
         
         @media screen and (max-width: 500px) {
             display: none;
@@ -89,73 +93,86 @@ strong {
     position: relative;
     
     header {
-        position: relative;
-        width: 95%;
+        position: fixed;
+        top: 0;
+        right: 20px;
+        width: 482px;
         height: 60px;
-        margin: 0 auto;
-        margin-top: -70px;
-        margin-bottom: 10px;
-        border-right: 20px solid #3498DB;
-        background-color: white;
-        border-radius: 2px;
-        box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
         box-sizing: border-box;
-        
-        .bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background-color: #3498DB;
+
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            padding: 0;
+            right: 0;
         }
         
         ul {
             li {
                 display: inline-block;
-                width: 20%;
+                width: 25%;
                 height: 60px;
                 text-align: center;
                 line-height: 56px;
                 font-size: 1.4em;
                 font-weight: bold;
                 cursor: pointer;
-                border-right: 1px solid #EEE;
                 box-sizing: border-box;
-                
+
+                @media screen and (max-width: 800px) {
+                    font-size: 1.6em;
+                    background-color: white;
+                    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+                }
+
                 @media screen and (max-width: 500px) {
-                    font-size: 1em;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    font-size: 1.2em;
                 }
             }
         }
     }
-    
+
     section {
-//        width: 80%;
+        width: 70%;
         margin: 0 auto;
+        padding: 50px 80px;
+        border-bottom: 1px solid $line-color;
+
+        @media screen and (max-width: 800px) {
+            width: 95%;
+            padding: 50px 20px;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            padding: 0;
+            border-bottom: none;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+        // box-sizing: border-box;
         
         h2 {
-            padding: 40px 0;
-            font-size: 3em;
+            float: left;
+            width: 20%;
+            padding: 25px 0;
+            font-size: 2em;
             font-weight: bold;
-            color: white;
-            background-color: #E74C3C;
+            color: $line-color;
+
+            @media screen and (max-width: 500px) {
+                float: none;
+                width: 100%;
+                text-align: center;
+                background-color: $background-color;
+            }
         }
-        
-        h3 {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 2.8em;
-            font-weight: bold;
-            color: white;
-            background-color: #2980B9;
-        }
-        
+
         .content {
-            width: 50%;
-            margin: 0 auto;
+            float: left;
+            width: 80%;
             padding: 20px 0;
             
             @media screen and (max-width: 800px) {
@@ -163,7 +180,9 @@ strong {
             }
             
             @media screen and (max-width: 500px) {
+                float: none;
                 width: 90%;
+                margin: 0 auto;
             }
             
             p {
@@ -237,14 +256,20 @@ strong {
             }
             
             .buttons {
-                margin: 30px 0;
+                margin: 10px 0;
                 text-align: center;
 
                 .btn {
-                    padding: 5px 20px;
+                    display: inline-block;
+                    width: 250px;
                     font-size: 1.8em;
                     &:first-child {
                         margin-right: 20px;
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        width: 160px;
+                        font-size: 1.2em;
                     }
                     
                     @media screen and (max-width: 500px) {
@@ -258,24 +283,63 @@ strong {
                     }
                 }
             }
+
+            .sub-section {
+                padding: 20px 0;
+
+                @media screen and (max-width: 500px) {
+                    padding: 0;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+
+                &:first-child {
+                    border-bottom: 1px dotted $line-color;
+                }
+
+                h3 {
+                    float: left;
+                    width: 15%;
+                    padding: 5px 0;
+                    font-size: 1.5em;
+                    font-weight: bold;
+
+                    @media screen and (max-width: 500px) {
+                        float: none;
+                        width: 100%;
+                        text-align: center;
+                        padding: 0;
+                    }
+                }
+
+                .sub-content {
+                    float: left;
+                    width: 85%;
+
+                    @media screen and (max-width: 500px) {
+                        float: none;
+                        width: 100%;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    clear: both;
+                    display: block;
+                }
+            }
         }
-    }
-    
-    section#library,
-    section#volunteer,
-    section#donate {
-        .btn {
+
+        &:after {
+            content: '';
             display: block;
-            width: 50%;
-            margin: 15px auto;
-            padding: 10px 10px; 
-            font-size: 2em;
+            clear: both;
         }
     }
     
     footer {
         position: relative;
-        height: 200px;
+        height: 220px;
         text-align: center;
         background-color: #2C3E50;
         color: white;
@@ -288,6 +352,11 @@ strong {
             font-size: 1.4em;
             line-height: 30px;
             text-decoration: underline;
+
+            li {
+                margin-top: 5px;
+            }
+
             a {
                 color: white;
             }
@@ -311,8 +380,74 @@ strong {
         .copyright {
             position: absolute;
             left: 10px;
+            bottom: 35px;
+            font-size: 1.1em;
+
+            a {
+                color: white;
+            }
+        }
+
+        .contributor {
+            position: absolute;
+            left: 10px;
             bottom: 10px;
             font-size: 1.1em;
+
+            a {
+                color: white;
+            }
         }
     }
 }
+
+.sponsor-list {
+    img {
+        display: block;
+        width: calc(25% - 10px);
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 800px) {
+            width: calc(50% - 10px);
+        }
+
+        @media screen and (max-width: 500px) {
+            width: calc(50% - 10px);
+        }
+    }
+}
+
+.participant-library-map {
+    width: 100%;
+    height : 400px;
+}
+
+// .left_label {
+//     display: inline-block;
+//     width: 31%;
+//     text-align: center;
+//     vertical-align: top;
+// }
+
+// h1.label {
+//     font-size: 26px;
+//     font-weight: bold;
+// }
+
+// h1.label.margin_introduce {
+//     margin-top: 3em;
+// }
+
+// h1.label.margin_library {
+//     margin-top: 3em;
+// }
+// .present_custom {
+//   height:300px;
+// }
+
+// .preparing_present {
+//   font-size: 55px;
+// }
+// h1.label.margin_default {
+//     margin-top: 3em;
+// }

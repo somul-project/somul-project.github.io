@@ -5,7 +5,9 @@
   "main": "gulpfile.babel.js",
   "dependencies": {
     "jquery": "^1.12.4",
-    "jquery.transit": "^0.9.12"
+    "jquery.stellar": "github:markdalgleish/stellar.js#v0.5.0",
+    "jquery.transit": "^0.9.12",
+    "masonry-layout": "^4.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

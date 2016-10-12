@@ -1,36 +1,18 @@
 'use strict';
 
 var $ = require('jquery/dist/jquery');
+window.jQuery = $;
 require('jquery.transit/jquery.transit.js');
+require('jquery.stellar/jquery.stellar.js'); 
+var Masonry = require('masonry-layout/masonry.js');
 
 (function() {
     $(document).ready(function() {
         $('#splash-logo h1 img').transition({ y: '-20px', opacity: 1 }, 1000);
         
-        var $header = $('#app header');
-        if ($(document).scrollTop() > $(window).height()-70) {
-            if ($header.css('position') != 'fixed') {
-                $header.css({ position: 'fixed', marginTop: 0, top: 0, width: '100%', left: 0, marginLeft: 0 });
-            }
-        }
-        $header.find('.bar').width((($(document).scrollTop()-$(window).height()-60) / ($('#app').height()-$(window).height())) * $(window).width());
-        
-        $(document).scroll(function() {
-            var scrollTop = $(this).scrollTop();
-            $('#splash-image').css({ backgroundPosition: "0px " + (Math.max($('#splash-image').scrollTop(), scrollTop) / 4) + "px"}); 
-            
-            var $header = $('#app header');
-            if (scrollTop > $(window).height()-70) {
-                if ($header.css('position') != 'fixed') {
-                    $header.css({ position: 'fixed', marginTop: 0, top: 0, left: '50%', marginLeft: '-'+($header.width()/2)+'px' });
-                    $header.stop().animate({ width: '100%', left: 0, marginLeft: 0 }, 200);
-                }
-            } else {
-                $header.css({ position: 'static', margin: '0 auto', marginTop: '-70px', marginBottom: '10px' });
-                $header.stop().animate({ width: '95%' }, 200);
-            }
-            
-            $header.find('.bar').width(((scrollTop-$(window).height()+60) / ($('#app').height()-$(window).height())) * $(window).width());
+        $.stellar({
+            horizontalScrolling: false,
+            verticalOffset: 20
         });
         
         $('a[href^="#"]').click(function(event){
@@ -39,6 +21,12 @@ require('jquery.transit/jquery.transit.js');
             }, 500);
             
             return false;
+        });
+
+        var grid = document.querySelector('.sponsor-list');
+        var msnry = new Masonry(grid, {
+          itemSelector: 'img',
+          gutter: 10
         });
     });
 })();
