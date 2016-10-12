@@ -4,6 +4,7 @@ var $ = require('jquery/dist/jquery');
 window.jQuery = $;
 require('jquery.transit/jquery.transit.js');
 require('jquery.stellar/jquery.stellar.js'); 
+require('bootstrap/dist/js/bootstrap.min.js');
 var Masonry = require('masonry-layout/masonry.js');
 
 (function() {

@@ -1,13 +1,28 @@
 @charset "utf-8";
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 @import "reset";
 @import "variable";
+@import "bootstrap.min";
+
+@font-face{
+    font-family: 'Godo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'),
+         url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+}
+@font-face{
+    font-family: 'Godo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'),
+         url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
 
 html, body {
     width: 100%;
     height: 100%;
     font-size: 11pt;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Godo', sans-serif;
     color: $text-color;
     word-break: keep-all;
     background-color: #FBFBFB;
