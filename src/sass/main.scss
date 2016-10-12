@@ -129,6 +129,7 @@ strong {
         height: 60px;
         background-color: transparent;
         box-sizing: border-box;
+        z-index: 1000;
 
         @media screen and (max-width: 800px) {
             width: 100%;
@@ -415,6 +416,10 @@ strong {
             a {
                 color: white;
             }
+
+            @media screen and (max-width: 500px) {
+                font-size: 0.9em;
+            }
         }
 
         .contributor {
@@ -425,6 +430,10 @@ strong {
 
             a {
                 color: white;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 0.9em;
             }
         }
     }

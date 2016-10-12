@@ -1,13 +1,19 @@
 'use strict';
 
 var $ = require('jquery/dist/jquery');
+var imagesLoaded = require('imagesloaded/imagesloaded.js');
+var jQueryBridget = require('jquery-bridget');
+var Masonry = require('masonry-layout/masonry.js');
+
 window.jQuery = $;
 require('jquery.transit/jquery.transit.js');
 require('jquery.stellar/jquery.stellar.js'); 
 require('bootstrap/dist/js/bootstrap.min.js');
-var Masonry = require('masonry-layout/masonry.js');
 
 (function() {
+    jQueryBridget('masonry', Masonry, $);
+    imagesLoaded.makeJQueryPlugin($);
+        
     $(document).ready(function() {
         $('#splash-logo h1 img').transition({ y: '-20px', opacity: 1 }, 1000);
         
@@ -24,10 +30,13 @@ var Masonry = require('masonry-layout/masonry.js');
             return false;
         });
 
-        var grid = document.querySelector('.sponsor-list');
-        var msnry = new Masonry(grid, {
-          itemSelector: 'img',
-          gutter: 10
+        var $sponsorList = $('.sponsor-list');
+        $sponsorList.imagesLoaded(function() {
+            $sponsorList.masonry({
+                itemSelector: 'img',
+                gutter: 10,
+                percentPosition: true
+            })
         });
     });
 })();
