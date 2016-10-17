@@ -62,7 +62,25 @@
                 <h2>행사 현황</h2>
                 <div class="content">
                     <iframe class="participant-library-map" src="https://www.google.com/maps/d/embed?mid=1FN87QeMVlhNVVZgWpMiV3fOFaug"></iframe>
-                    <iframe class="participant-library-map" style="margin-top: 20px;height: 600px;" src="https://docs.google.com/spreadsheets/d/1b4wED2adVWw4VpLhJyxvX0sWnNL1s8MNMS5Mcm-k55w/pubhtml?widget=true&amp;headers=false"></iframe>
+                    <div class="buttons">
+                        <a class="btn" data-toggle="modal" data-target="#modal_speech">강연 현황</a>
+                    </div>
+                    <div id="modal_speech" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">강연 현황</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe style="width: 100%;height: 400px;" src="https://docs.google.com/spreadsheets/d/1b4wED2adVWw4VpLhJyxvX0sWnNL1s8MNMS5Mcm-k55w/pubhtml?widget=true&amp;headers=false"></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="join">
