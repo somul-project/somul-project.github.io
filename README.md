@@ -4,7 +4,7 @@
 
 이 페이지 소스는 MIT License 이고, 콘텐츠 들은 CC-BY-NC 라이선스 입니다.
 
-## Dependency
+<!-- ## Dependency
 * jQuery
 * jQuery.transit
 * gulp
@@ -14,6 +14,6 @@
 2. gulp
 3. Run!
 
----
+--- -->
 
 누구나 기여가 가능합니다. 이슈 #1 을 보시면 할 일들이 있습니다.
