@@ -1,13 +1,7 @@
-@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:200;src:local('Nanum Barun Gothic UltraLight'), local('Nanum Barun Gothic-UltraLight'), local('NanumBarunGothic UltraLight');src:url(fonts/NanumBarunGothicUltraLight.eot);src:url(fonts/NanumBarunGothicUltraLight.eot?#iefix) format('embedded-opentype'),
-url(fonts/NanumBarunGothicUltraLight.woff) format('woff'),
-url(fonts/NanumBarunGothicUltraLight.ttf) format('truetype');}
-@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:300;src:local('Nanum Barun Gothic Light'), local('Nanum Barun Gothic-Light'), local('NanumBarunGothic Light');src:url(fonts/NanumBarunGothicLight.eot);src:url(fonts/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:300;src:local('Nanum Barun Gothic Light'), local('NanumBarunGothic-Light'), local('NanumBarunGothic Light');src:url(fonts/NanumBarunGothicLight.eot);src:url(fonts/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
 url(fonts/NanumBarunGothicLight.woff) format('woff'),
 url(fonts/NanumBarunGothicLight.ttf) format('truetype');}
-@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:400;src:local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');src:url(fonts/NanumBarunGothic.eot);src:url(fonts/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
-url(fonts/NanumBarunGothic.woff) format('woff'),
-url(fonts/NanumBarunGothic.ttf) format('truetype');}
-@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:700;src:local('Nanum Barun Gothic Bold'), local('Nanum Barun Gothic-Bold'), local('NanumBarunGothic Bold');src:url(fonts/NanumBarunGothicBold.eot);src:url(fonts/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:700;src:local('Nanum Barun Gothic Bold'), local('NanumBarunGothic-Bold'), local('Nanum Barun Gothic-Bold'), local('NanumBarunGothic Bold');src:url(fonts/NanumBarunGothicBold.eot);src:url(fonts/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
 url(fonts/NanumBarunGothicBold.woff) format('woff'),
 url(fonts/NanumBarunGothicBold.ttf) format('truetype');}
 html, body, div, span, applet, object, iframe,
