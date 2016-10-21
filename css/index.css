@@ -444,7 +444,7 @@ nav.affix {
 
 @media all and (min-width: 641px) {
   #event {
-    padding: 5% 7.5%;
+    padding: 5% 10%;
   }
 
   #event h3 {
