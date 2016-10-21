@@ -251,7 +251,6 @@ nav.affix {
   nav {
     margin-left: calc(-30% - 20px);
     width: 60%;
-
   }
 
   nav ul {
@@ -391,7 +390,6 @@ nav.affix {
     padding-top: 20vh;
     text-align: center;
   }
-
 }
 
 @media all and (min-width: 641px) {
@@ -414,10 +412,6 @@ nav.affix {
   background-color: #FFEA01;
 }
 
-#event h3 {
-  font-size: 2rem;
-}
-
 #event p {
   margin-bottom: 10px;
 }
@@ -427,20 +421,24 @@ nav.affix {
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  height: 200px;
 }
 
 @media all and (max-width: 640px) {
   #event {
-    padding: 10% 5%;
+    padding: 12.5% 7.5%;
+  }
+
+  #event h3 {
+    font-size: 1.5rem;
   }
 
   #event .col:first-child {
-    margin-bottom: 5%;
+    margin-bottom: 50px;
   }
 
   #event .col:last-child {
     background-position: center;
+    height: 150px;
   }
 }
 
@@ -449,8 +447,13 @@ nav.affix {
     padding: 5% 7.5%;
   }
 
+  #event h3 {
+    font-size: 2rem;
+  }
+
   #event .col:last-child {
     background-position: right;
+    height: 200px;
   }
 }
 

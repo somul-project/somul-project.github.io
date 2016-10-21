@@ -6,7 +6,7 @@ $(document).ready(function() {
 		}, "easeInCirc");
     if($('nav .menu').css('display') != 'none') {
       $('nav ul').addClass('hidetoggle');
-      $('nav').css('height', '25px');
+      $('nav').css('height', '20px');
     }
 	});
 
@@ -17,13 +17,12 @@ $(document).ready(function() {
   });
 
   $('nav .menu').click(function() {
-    // alert($('nav .menu').css('display')); -> block
     if($('nav ul').css('display') == 'none') {
       $('nav ul').removeClass('hidetoggle');
-      $('nav').css('height', '225px');
+      $('nav').css('height', '260px');
     } else {
       $('nav ul').addClass('hidetoggle');
-      $('nav').css('height', '25px');
+      $('nav').css('height', '20px');
     }
   });
 
