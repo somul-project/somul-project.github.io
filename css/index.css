@@ -360,6 +360,10 @@ nav.affix {
 
 
 /*status*/
+#status {
+  padding-bottom: 0;
+}
+
 #status iframe {
   width: 100%;
   margin-top: 10px;
@@ -403,6 +407,52 @@ nav.affix {
   }
 }
 
+
+/*event*/
+#event {
+  padding: 5% 7.5%;
+  background-color: #FFEA01;
+}
+
+#event h3 {
+  font-size: 2rem;
+}
+
+#event p {
+  margin-bottom: 10px;
+}
+
+#event .col:last-child {
+  background-image: url(../img/somulevent.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+@media all and (max-width: 640px) {
+  #event {
+    padding: 10% 5%;
+  }
+
+  #event .col:first-child {
+    margin-bottom: 5%;
+  }
+
+  #event .col:last-child {
+    background-position: center;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #event {
+    padding: 5% 7.5%;
+  }
+
+  #event .col:last-child {
+    background-position: right;
+  }
+}
 
 
 /*join*/
