@@ -1,0 +1,31 @@
+@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:300;src:local('Nanum Barun Gothic Light'), local('NanumBarunGothic-Light'), local('NanumBarunGothic Light');src:url(fonts/NanumBarunGothicLight.eot);src:url(fonts/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+url(fonts/NanumBarunGothicLight.woff) format('woff'),
+url(fonts/NanumBarunGothicLight.ttf) format('truetype');}
+@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:700;src:local('Nanum Barun Gothic Bold'), local('NanumBarunGothic-Bold'), local('Nanum Barun Gothic-Bold'), local('NanumBarunGothic Bold');src:url(fonts/NanumBarunGothicBold.eot);src:url(fonts/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+url(fonts/NanumBarunGothicBold.woff) format('woff'),
+url(fonts/NanumBarunGothicBold.ttf) format('truetype');}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea, button{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:'Nanum Barun Gothic','Noto Sans CJK','Helvetica Neue','맑은 고딕',Arial;font-weight:normal;line-height:1.5;font-weight:300;letter-spacing:-0.06rem;outline:none;-webkit-appearnace:none;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{display:block;}
+html,body{line-height:1.25;height:100%;}
+ol,li{list-style-type:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+::selection{background-color:#FD7A25;color:white;}
+a{text-decoration:none;}
+b{font-weight:bolder;}
+button{background:none;}
