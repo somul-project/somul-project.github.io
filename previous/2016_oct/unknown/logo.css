@@ -1,0 +1,14 @@
+
+	
+.ppp{overflow:hidden;}
+
+	
+#center{position:absolute;left:5%;top:10%; padding-top:20px;}
+
+
+.close{display:none;}
+
+
+.box{overflow:hidden; padding:10px;float:left;height:100px;}
+
+#center_header{position:fixed;background-color:white;z-index:10;}
