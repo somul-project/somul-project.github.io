@@ -76,6 +76,15 @@
             </ol>
           </blockquote>
         </div>
+        <div class="modal_library_disabled" style="display: none;">
+          <h5>도서관 지원이 마감되었습니다.</h5>
+          <p>
+            이번 2017년 5월 소프트웨어에 물들다 도서관 지원이 마감되었습니다. 보내주신 성원에 깊이 감사드리며, 신청해주신 도서관들의 리스트가 곧 정리되어 이 사이트에 게시될 예정입니다.
+          </p>
+          <p>
+            도서관 관련 문의 사항은 하단에 있는 연락처로 문의하시면 됩니다.
+          </p>
+        </div>
         <div class="action">
           <button type="button" class="flat close">닫기</button>
         </div>
@@ -171,9 +180,9 @@
         </p>
         <div class="action">
           <button type="button" class="flat modal_open" data-modal="detail_lib">자세히 보기</button>
-          <a href="https://goo.gl/l9w5dZ">
-          	<button type="button" class="flat">도서관 신청</button>
-          </a>
+          <!--<a href="https://goo.gl/l9w5dZ">-->
+          	<button type="button" class="flat modal_open" data-modal="library_disabled">도서관 신청</button>
+          <!--</a>-->
         </div>
       </div>
       <div class="card">
@@ -347,6 +356,6 @@
   </footer>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/index.compressed.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
