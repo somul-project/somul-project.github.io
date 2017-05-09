@@ -1,0 +1,37 @@
+var iwCursor = undefined;
+
+function initMap() {
+    // Google Map Javascript API 초기화
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: {lat: 36.5, lng: 127.5}
+    });
+    
+    // 도서관 위치
+    var locations = [{position:new google.maps.LatLng(37.551973,126.83666),title:"작은샘작은도서관",map:map},{position:new google.maps.LatLng(37.49546,126.887452),title:"구로구청 도서관",map:map},{position:new google.maps.LatLng(37.506873,126.845591),title:"글마루한옥어린이도서관",map:map},{position:new google.maps.LatLng(37.489644,126.944753),title:"벽산블루밍도서관",map:map},{position:new google.maps.LatLng(37.467736,126.944801),title:"관악문화관도서관",map:map},{position:new google.maps.LatLng(37.573176,127.050488),title:"동대문구답십리도서관",map:map},{position:new google.maps.LatLng(37.589864,127.047329),title:"동대문구정보화도서관",map:map},{position:new google.maps.LatLng(37.547684,126.932058),title:"마포구립서강도서관",map:map},{position:new google.maps.LatLng(37.559092,127.034932),title:"성동구립도서관",map:map},{position:new google.maps.LatLng(37.608762,127.021976),title:"소리마을작은도서관",map:map},{position:new google.maps.LatLng(37.599032,127.035175),title:"종암동새날도서관",map:map},{position:new google.maps.LatLng(37.585966,126.919694),title:"응암정보도서관",map:map},{position:new google.maps.LatLng(37.609583,126.912851),title:"구립구산동도서관마을",map:map},{position:new google.maps.LatLng(37.582692,126.907454),title:"증산정보도서관",map:map},{position:new google.maps.LatLng(37.615242,127.086902),title:"중랑구립정보도서관",map:map},{position:new google.maps.LatLng(37.503453,126.740157),title:"부평기적의도서관",map:map},{position:new google.maps.LatLng(37.491051,126.739445),title:"부개도서관",map:map},{position:new google.maps.LatLng(37.505928,126.714369),title:"청천도서관",map:map},{position:new google.maps.LatLng(37.693843,126.591993),title:"시립통진도서관",map:map},{position:new google.maps.LatLng(37.513268,126.77123),title:"약대 신나는가족도서관",map:map},{position:new google.maps.LatLng(37.47169,127.1429),title:"세계동화작은도서관",map:map},{position:new google.maps.LatLng(37.302851,127.047414),title:"광교홍재도서관",map:map},{position:new google.maps.LatLng(37.257185,127.072003),title:"영통도서관",map:map},{position:new google.maps.LatLng(37.238623,127.050944),title:"태장마루도서관",map:map},{position:new google.maps.LatLng(37.284765,126.996658),title:"화서다산도서관",map:map},{position:new google.maps.LatLng(37.72648,127.042677),title:"의정부어린이도서관",map:map},{position:new google.maps.LatLng(37.061923,127.067545),title:"평택 사랑나무작은도서관",map:map},{position:new google.maps.LatLng(37.445173,129.164825),title:"삼척교육문화관",map:map},{position:new google.maps.LatLng(37.445173,129.164825),title:"삼척교육문화관",map:map},{position:new google.maps.LatLng(37.871844,127.731601),title:"담작은도서관",map:map},{position:new google.maps.LatLng(35.689193,127.9033),title:"거창군립한마음도서관",map:map},{position:new google.maps.LatLng(35.852686,128.560466),title:"대구시립두류도서관",map:map},{position:new google.maps.LatLng(35.859365,128.630676),title:"수성구립 범어도서관",map:map},{position:new google.maps.LatLng(34.836334,127.892107),title:"민들레어린이도서관",map:map},{position:new google.maps.LatLng(35.249742,129.217315),title:"부산광역시 기장도서관",map:map},{position:new google.maps.LatLng(35.281339,128.400906),title:"도란도란그림책버스도서관",map:map},{position:new google.maps.LatLng(36.783109,127.588633),title:"증평도서관",map:map},{position:new google.maps.LatLng(36.451662,127.126353),title:"공주도서관",map:map},{position:new google.maps.LatLng(36.388629,127.33254),title:"대전송림초등학교",map:map}];
+
+    // Marker 대입
+    var markers = locations.map(function(location, i) {
+        var marker = new google.maps.Marker(locations[i]);
+        listenClickEvent(marker);
+        return marker;
+    });
+}
+
+function listenClickEvent(marker) {
+    // 정보 창 템플릿
+    var contentTemplateStart = "<div id='content'><h2>";
+    var contentTemplateEnd = "</h2></div>";
+
+    // Click Listener 설정
+    marker.addListener('click', function() {
+        if (iwCursor != undefined) {
+            iwCursor.close();
+        }   
+        var infowindow = new google.maps.InfoWindow({
+            content: contentTemplateStart + marker.title + contentTemplateEnd
+        });
+        infowindow.open(map, marker);
+        iwCursor = infowindow;
+    });
+}
