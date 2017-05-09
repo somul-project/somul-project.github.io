@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+        <title>소프트웨어에 물들다 도서관 강연자 조회</title>
+
+        <!-- 부트스트랩 -->
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">
+        <link rel="stylesheet" href="index.css">
+
+        <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+        <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Email Modal -->
+        <div class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"><span class="modal-title-lib">도서관</span> 관리자 인증</h4>
+                </div>
+                <div class="modal-body">
+                    <span>강연자와 진행자의 개인 정보 보호를 위하여, 행사를 진행해야 하는 각 도서관에서만 강연자 및 진행자 개인 정보를 확인할 수 있습니다.
+                    <span class="modal-title-lib">도서관</span>의 담당자께서는 저희에게 전달해주신 E-mail 주소를 통해 본인 인증을 해주시기 바랍니다.</span>
+                    <br><br>
+                    <span class="email-not-available hidden" style="color: red;">E-mail 인증에 실패하였습니다. 주소를 다시 확인해주세요.</span>
+                    <input type="email" class="form-control" id="manager-email" placeholder="담당자 E-mail 주소">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal();" class="btn btn-default" data-dismiss="modal">닫기</button>
+                    <button type="button" onclick="checkValid();" class="btn btn-primary">조회하기&nbsp;<span class="glyphicon glyphicon-repeat loading-icon hidden" aria-hidden="true"></span></button>
+                </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <section class="container">
+            <div class="top-hr"></div>
+            <h1>2017년 5월<br>소프트웨어에 물들다<br>도서관 강연 정보</h1>
+            <hr>
+            <div class="collapse" id="teacher_show_collapse">
+                <button type="button" class="btn btn-danger" onclick="$('.modal').modal('show');" id="information-reveal">비공개 정보 확인하기</button>
+                <h2 class="collapse-title" id="top-cursor"><span id="collapse-name">구로구청도서관</span> 강연</h2>
+                <div class="container-fluid time-container">
+                    <div class="col-md-1 col-xs-12">
+                        <span class="time-span">14시</span>
+                    </div>
+                    <div class="time-detail time-14 col-md-11 col-xs-12">
+                        <span id="time-14-title">온라인 욕설, 소프트웨어로 해결해보자!</span><br>
+                        <span id="time-14-name">안서형</span>
+                        <span class="detail-slash">/</span>
+                        <span id="time-14-email">westbrother@bitbyte.kr</span>
+                        <span class="detail-slash">/</span>
+                        <span id="time-14-hide" class="need-hide">휴대폰 정보 비공개</span>
+                        <span id="time-14-phone" class="need-reveal hidden"></span>
+                        <br>
+                        <p id="time-14-detail">10대의 습관적인 비속어 사용, 너무 심각하다!
+단순한 비속어 차단은 문제를 근본적으로 해결할 수 없다!
+스트레스 받지 않고 재밌게 비속어를 줄일 순 없을까?
+비속어를 이모티콘으로 바꾸고, 사용 횟수를 알려주는 '바른말 키패드'
+소통은 품위있게, 사회는 따뜻하게 만드는 소프트웨어</p>
+                    </div>
+                </div>
+                <div class="container-fluid time-container">
+                    <div class="col-md-1 col-xs-12">
+                        <span class="time-span">15시</span>
+                    </div>
+                    <div class="time-detail time-15 col-md-11 col-xs-12">
+                        <span id="time-15-title">재미있는 가상현실과 증강현실의 세계!</span><br>
+                        <span id="time-15-name">유광무</span>
+                        <span class="detail-slash">/</span>
+                        <span id="time-15-email">vnycall74@naver.com</span>
+                        <span class="detail-slash">/</span>
+                        <span id="time-15-hide" class="need-hide">휴대폰 정보 비공개</span>
+                        <span id="time-15-phone" class="need-reveal hidden"></span>
+                        <br>
+                        <p id="time-15-detail">요즘 VR방이 생길정도로 핫하다는 가상현실과 증강현실!
+
+증강현실과 가상현실이 무엇인지 알아보고 차이점을 알아봅시다!
+
+주변에 VR과 AR을 이용한 기술(제품)과 앞으로의 전망에 대해 소개합니다
+
+어린이들이 쉽게 이해하게 내용이 구성되어 있으며,
+재미있게 감상할만한 VR과 AR 관련 영상 자료를 준비하였습니다!</p>
+                    </div>
+                </div>
+                <h2 class="mc-title">진행자 정보</h2>
+                <div class="mc-area need-hide">진행자 정보 비공개</div>
+                <div class="need-reveal hidden">
+                    <span id="mc-1-name">홍승환</span><span class="detail-slash">&nbsp;/&nbsp;</span>
+                    <span id="mc-1-email">hj332921@naver.com</span><span class="detail-slash">&nbsp;/&nbsp;</span>
+                    <span id="mc-1-phone">010-4550-9287</span><br>
+                    <span id="mc-2-name">김동규</span><span class="detail-slash">&nbsp;/&nbsp;</span>
+                    <span id="mc-2-email">support@rainclab.net</span><span class="detail-slash">&nbsp;/&nbsp;</span>
+                    <span id="mc-2-phone">010-3816-1729</span><br>
+                </div>
+                <hr>
+            </div>
+            <h3 class="library_select_guide">하단의 도서관 리스트 중 강연자 조회를 희망하는 도서관을 선택하세요.</h3>
+            <div class="library_link_list">
+                <a class="library_link" id="1">작은샘작은도서관</a>
+                <a class="library_link" id="2">구로구청 도서관</a>
+                <a class="library_link" id="3">벽산블루밍도서관</a>
+                <a class="library_link" id="4">관악문화관도서관</a>
+                <a class="library_link" id="5">동대문구답십리도서관</a>
+                <a class="library_link" id="6">동대문구정보화도서관</a>
+                <a class="library_link" id="7">마포구립서강도서관</a>
+                <a class="library_link" id="8">성동구립도서관</a>
+                <a class="library_link" id="9">소리마을작은도서관</a>
+                <a class="library_link" id="10">종암동새날도서관</a>
+                <a class="library_link" id="11">응암정보도서관</a>
+                <a class="library_link" id="12">구립구산동도서관마을</a>
+                <a class="library_link" id="13">증산정보도서관</a>
+                <a class="library_link" id="14">중랑구립정보도서관</a>
+                <a class="library_link" id="15">부평기적의도서관</a>
+                <a class="library_link" id="16">시립통진도서관</a>
+                <a class="library_link" id="17">약대 신나는가족도서관</a>
+                <a class="library_link" id="18">세계동화작은도서관</a>
+                <a class="library_link" id="19">광교홍재도서관</a>
+                <a class="library_link" id="20">영통도서관</a>
+                <a class="library_link" id="21">태장마루도서관</a>
+                <a class="library_link" id="22">화서다산도서관</a>
+                <a class="library_link" id="23">용인시청덕도서관</a>
+                <a class="library_link" id="24">의정부어린이도서관</a>
+                <a class="library_link" id="25">평택 사랑나무작은도서관</a>
+                <a class="library_link" id="26">삼척교육문화관</a>
+                <a class="library_link" id="27">담작은도서관</a>
+                <a class="library_link" id="28">대구시립두류도서관</a>
+                <a class="library_link" id="29">수성구립 범어도서관</a>
+                <a class="library_link" id="30">민들레어린이도서관</a>
+                <a class="library_link" id="31">부산광역시 기장도서관</a>
+                <a class="library_link" id="32">도란도란그림책버스도서관</a>
+                <a class="library_link" id="33">증평도서관</a>
+                <a class="library_link" id="34">공주도서관</a>
+                <a class="library_link" id="35">대전송림초등학교</a>
+            </div>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="index.min.js"></script>
+    </body>
+</html>
