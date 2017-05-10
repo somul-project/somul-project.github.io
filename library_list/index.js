@@ -24,6 +24,18 @@ $(document).ready(function() {
         $("body").stop().animate({scrollTop:0}, 1000, 'swing', function() {});
       });
   });
+
+  $('#library-search').bind("keyup", function(event) {
+    var val = $(this).val();
+    $(".library_link").each(function() {
+      console.log("test : " + $(this).html() + " includes " + val + "?");
+      if ($(this).html().includes(val) == false) {
+        $(this).css("display", "none");
+      } else {
+        $(this).css("display", "block");
+      }
+    });
+  });
 });
 
 function checkValid() {

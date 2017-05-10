@@ -24,8 +24,8 @@ h3 {
     font-weight: lighter;
 }
 
-.library_select_guide {
-    font-size: 25px;
+#library-search {
+    margin-bottom: 20px;
 }
 
 .collapse-title {
