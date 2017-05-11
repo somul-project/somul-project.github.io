@@ -85,6 +85,15 @@
             도서관 관련 문의 사항은 하단에 있는 연락처로 문의하시면 됩니다.
           </p>
         </div>
+        <div class="modal_teacher_disabled" style="display: none;">
+          <h5>강연자 지원이 마감되었습니다.</h5>
+          <p>
+            이번 2017년 5월 소프트웨어에 물들다 강연자 지원이 우선적으로 마감되었습니다. 보내주신 성원에 깊이 감사드립니다.
+          </p>
+          <p>
+            현재 추가적으로 강연자가 필요할 가능성이 있는 상태입니다. 혹시나 자신을 강연자 대기자 명단에 반영시키고 싶으신 분들께서는 hisfact@kookmin.ac.kr로 문의주시기 바랍니다.
+          </p>
+        </div>
         <div class="action">
           <button type="button" class="flat close">닫기</button>
         </div>
@@ -183,6 +192,9 @@
           <!--<a href="https://goo.gl/l9w5dZ">-->
           	<button type="button" class="flat modal_open" data-modal="library_disabled">도서관 신청</button>
           <!--</a>-->
+          <a href="http://somul.kr/library_list">
+            <button type="button" class="flat">도서관 별 강연자 정보 보기</button>
+          </a>
         </div>
       </div>
       <div class="card">
@@ -196,11 +208,11 @@
         </p>
         <div class="action">
           <button type="button" class="flat modal_open" data-modal="detail_speaker">자세히 보기</button>
-          <a href="http://bit.ly/lec-apply">
-            <button type="button" class="flat">강연자 봉사 신청</button>
-          </a>
+          <!--<a href="http://bit.ly/lec-apply">-->
+            <button type="button" class="flat modal_open" data-modal="teacher_disabled">강연자 봉사 신청</button>
+          <!--</a>-->
           <a href="https://goo.gl/forms/I7Wov6KUqYSqiAMz2">
-            <button type="button" class="flat">진행 봉사 신청</button>
+            <button type="button" class="flat">진행자 봉사 신청</button>
           </a>
         </div>
       </div>

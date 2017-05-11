@@ -28,7 +28,6 @@ $(document).ready(function() {
   $('#library-search').bind("keyup", function(event) {
     var val = $(this).val();
     $(".library_link").each(function() {
-      console.log("test : " + $(this).html() + " includes " + val + "?");
       if ($(this).html().includes(val) == false) {
         $(this).css("display", "none");
       } else {
