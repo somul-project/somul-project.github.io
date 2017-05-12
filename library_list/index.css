@@ -7,6 +7,30 @@ html, body {
     margin: 0 auto;
 }
 
+#loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    opacity: 0.7;
+    z-index: 50;
+    background-blend-mode: multiply;
+    background: #000;
+}
+
+.loader-icon {
+    color: white;
+    font-size: 200px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50% !important;
+    margin-left: -100px !important;
+    margin-top: -100px;
+    z-index: 100;
+}
+
 .top-hr {
     height: 1px;
     width: 150px;

@@ -6,6 +6,7 @@ $collapse.collapse('hide');
 
 $(document).ready(function() {
   $('a').click(function(event) {
+      $('#loader').fadeIn("slow", function(){});
       $('.need-reveal').addClass("hidden");
       $('.need-hide').removeClass('hidden');
       $('#information-reveal').removeClass("hidden");
@@ -22,6 +23,7 @@ $(document).ready(function() {
         });
         $collapse.collapse('show');
         $("body").stop().animate({scrollTop:0}, 1000, 'swing', function() {});
+        $("#loader").fadeOut("slow", function(){});
       });
   });
 
