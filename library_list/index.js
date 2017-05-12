@@ -37,6 +37,12 @@ $(document).ready(function() {
       }
     });
   });
+
+  $("#manager-email").keydown(function (key) {
+    if (key.keyCode == 13){
+        checkValid();
+    }
+  });
 });
 
 function checkValid() {
