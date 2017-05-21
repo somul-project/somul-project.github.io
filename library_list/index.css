@@ -318,6 +318,14 @@ h3 {
     display: auto;
 }
 
+#manager-name {
+    font-size: 20px;
+}
+
+#manager-phone {
+    font-size: 20px;
+}
+
 @media (max-width: 1199px) {
     .top-hr {
         width: 100px;

@@ -15,6 +15,8 @@ $(document).ready(function() {
       $collapse.collapse('hide');
       $.get("http://rainclab.net:4567/getLibraryData/" + sel_number, function(data) {
         $('#collapse-name').html(data.library);
+        $('#manager-name').html(data.assigned_person['name']);
+        $('#manager-phone').html(data.assigned_person['telephone']);
         ['14', '15'].forEach(function(val, index, array) {
             var info = data.information["h" + val];
             ['title', 'name', 'email', 'detail'].forEach(function(val2, index, array) {
