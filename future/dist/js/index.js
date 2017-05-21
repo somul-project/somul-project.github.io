@@ -17,8 +17,11 @@ $(document).ready(function() {
 		$('#modal').scrollTop(0);
 	});
 	$('.action .close').click(function() {
-	    $('#modal, .close').hide();
-	    $('div').find(view).hide();
-	    $('body').css('overflow', 'auto');
-	  });
+		$('#modal, .close').hide();
+		$('div').find(view).hide();
+		$('body').css('overflow', 'auto');
+	});
+	var setHeight = window.innerHeight;
+	$("#bg-container").css("height", setHeight)
+	
 })
