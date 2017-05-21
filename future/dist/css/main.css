@@ -1,0 +1,409 @@
+@import "normalize.css";
+
+html,body {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.bg-container {
+	height: 750px;
+	background-image: url('../../dist/png/bg-inner-sample.png');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.bg-inner-menus {
+	padding-top: 91px;
+}
+
+.bg-inner-content ul {
+	list-style: none;
+}
+
+.bg-inner-content {
+	max -width: 700px;
+	max-width: 690px;
+	border-bottom: 1px solid #0F3692;
+}
+
+.bg-inner-content ul.topmenu-buttons {
+	margin: 0;
+	padding: 0;
+}
+
+.topmenu-buttons li {
+	display: inline-block;
+	width: 133px;
+	height: 39px;
+	color: #0F3692;
+	font-weight: 300;
+	cursor: pointer;
+}
+.bg-inner-software-colored-text h3 {
+	width: 200px;
+	font-size: 67px;
+	color: #0F3692;
+}
+
+.default-content {
+	height: 700px;
+	margin-left: 8.3%;
+	margin-right: 8.3%;
+	border-bottom: 1px solid #B0B3B7;
+	margin-bottom: 60px;
+	color: #133792;
+}
+
+.bottom-container {
+	padding-top: 83px;
+}
+
+
+.event-text-block {
+	width: 120px;
+	height: 47px;
+	background-color: #F4BC1C;
+	text-align: center;
+	line-height: 47px;
+	font-size: 20px;
+	color: #0F3692;
+	font-weight: bold;
+}
+
+.event-detail-text {
+	padding-left: 6.6%;
+	padding-right: 6.6%;
+	padding-top: 78px;
+}
+
+p.text-software-colored-title {
+	font-size: 25.91px;
+	color: #133792;
+	font-weight: bold;
+}
+
+
+.event-detail-items {
+	padding-left: 6.6%;
+	padding-right: 6.6%;
+	max-width: 1200px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.event-item-detail {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.item-icon {
+	height: 160px;
+	width: 160px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+.item-icon.library_map {
+	background-image : url('../../dist/png/event-status-map.png');
+	/* width: 134px; */
+	/* height: 138px; */
+	background-size: 134px 138px;
+}
+.item-icon.library_mc {
+	background-image : url('../../dist/png/event-status-mc.png');
+	background-size: 90px 138px;
+}
+
+.item-icon.part_request {
+	background-image : url('../../dist/png/participate-request-library.png');
+	background-size: 129px 140px;
+}
+
+.item-icon.part_mc {
+	background-image : url('../../dist/png/participate-request-mc.png');
+	/* height: 127px; */
+	/* width: 121px; */
+	background-size: 121px 127px;
+}
+.item-icon.donate {
+	background-image : url('../../dist/png/donate-guide.png');
+	background-size: 138px 102px;
+}
+
+.event-item-detail.one-item {
+	width: 100%;
+}
+
+
+.item-icon-text p {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 18px;
+}
+
+.event-detail-items .item-text {
+	margin-top: 28px;
+}
+.donate-text-left {
+	width: 50%;
+	float: left;
+	font-size: 15px;
+}
+
+.donate-detail-text {
+	width: 50%;
+	float: left;
+
+}
+
+
+
+.donate-text-inner {width: 308px;margin-left: auto;margin-right: auto;}
+
+.donate-text-address-inner {
+	width: 433px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.donate-deatil-item .item-label {
+	display: inline-block;
+	width: 121px;
+	vertical-align: top;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.donate-deatil-item .item-text {
+	display: inline-block;
+	font-size: 10px;
+}
+
+.donate-detail-text p.header-title {
+	font-size: 15px;
+}
+
+
+.default-content.event_introduce {
+	height: 600px;
+}
+
+.default-content.event_status {
+	height: 537px;
+}
+
+.default-content.event_request {
+	height: 679px;
+}
+.default-content.event_donate {
+	height: 700px;
+}
+.somul_past {
+	margin-left: 8.3%;
+	margin-right: 8.3%;
+}
+.somul_past {
+	margin-left: 8.3%;
+	margin-right: 8.3%;
+	color: #133792;
+	text-align:center;
+}
+.header-title-past {
+	text-align:center;
+}
+
+.topmenu-buttons li a {
+	text-decoration: none;
+	color: #0F3692;
+}
+
+
+.item-check-detail-button {
+	width: 129px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #F4BC1C;
+	height: 40px;
+	margin-top: 24px;
+	color: #F4BC1C;
+	font-weight: bold;
+}
+
+.item-check-detail-button p {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	line-height: 38px;
+	cursor: pointer;
+}
+
+.event_status .item-text {
+	height: 90px;
+}
+
+.event_request .item-text {
+	height: 236px;
+}
+
+.modal {
+	text-align: center;
+	padding: 0!important;
+}
+
+.modal:before {
+	content: '';
+	display: inline-block;
+	height: 50%;
+	vertical-align: middle;
+	margin-right: -4px;
+}
+
+.modal-close-action {
+    float: right;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal-close-action p {
+    margin: 0;
+    font-weight: bold;
+    color: #F4BC1C;
+}
+
+
+.modal-close-action:hover {
+    background-color: #efefef;
+    border-radius: 5px;
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+}
+
+
+.modal-dialog {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.modal_title {
+    font-weight: bold;
+}
+
+
+
+.modal_library_info_container {
+    background-color: #FFF;
+    padding: 40px 20px;
+    width: 600;
+}
+
+.somul_footer {
+    height: 49px;
+}
+blockquote {
+  margin: 15px 0;
+  padding: 0 10px;
+  padding-left: 20px;
+  border-left: 1px solid #CCC;
+  color: #666;
+  font-size: .9rem;
+	
+}
+ol {
+	    list-style-type: none;
+	    padding: 0;
+}
+blockquote ol li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+@media (max-width:1400px) {
+	.default-content {
+
+		margin-left: 3.3%;
+		margin-right: 3.3%;
+	}
+}
+
+@media (max-width: 1199px) {
+	.event_request .item-text {
+		height: 198px;
+	}
+	.default-content {
+
+		margin-left: 8.3%;
+		margin-right: 8.3%;
+	}
+	.event-item-detail {
+		width:100%;
+	}
+	.donate-text-left {
+		width:100%;
+	}
+	.donate-detail-text {
+		width:100%;
+	}
+
+
+	.default-content.event_introduce {
+		height: 688px;
+	}
+
+	.default-content.event_status {
+		height: 940px;
+	}
+
+	.default-content.event_request {
+		height: 1235px;
+	}
+	.default-content.event_donate {
+		height: 1298px;
+	}
+	.donate-detail-text {
+		margin-top:25px;
+	}
+	.header-title {
+		text-align:center;
+		font-size: 20px !important;
+		font-weight: bold;
+	}
+	.title-margin-set-donate {
+		margin-top:50px ;
+	}
+	.donate-text-address-inner {
+		width: 267px;
+	}
+	.donate-text-inner {
+		font-size:13px;
+	}
+	.donate-deatil-item .item-label {
+		width:81px;
+	}
+	.donate-deatil-item .item-text {
+		width:182px;
+	}
+	.event-detail-items .item-text {
+		font-size:11px;
+	}
+	.event-detail-text {
+		font-size: 13px;
+	}
+
+	.donate-text-inner {
+		width:267px;
+	}
+	.event-item-detail {
+		margin-top:40px;
+	}
+}
+
