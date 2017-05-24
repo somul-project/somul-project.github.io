@@ -36,25 +36,6 @@ $(document).ready(function() {
   };
 
   map = new daum.maps.Map(mapContainer, mapOption);
-  /*
-  var markerPosition  = new daum.maps.LatLng(36.6748632,127.7936119);
-
-  var marker = new daum.maps.Marker({
-      position: markerPosition
-  });
-
-  marker.setMap(map);
-
-  var iwContent = '<div style="width: 300px; height: 160px; padding: 20px"><h3>도서관을 선택하세요</h3></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    iwPosition = new daum.maps.LatLng(36.6748632,127.7936119); //인포윈도우 표시 위치입니다
-
-  var infowindow = new daum.maps.InfoWindow({
-      position : iwPosition,
-      content : iwContent
-  });
-
-  infowindow.open(map, marker);
-  */
 
   $('.button-container').click(function () {
     var id = $(this).attr('id');
