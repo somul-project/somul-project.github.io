@@ -29,8 +29,33 @@ $(document).ready(function() {
 		});
 	});
 	$('#library-search').click(function(evnet) {
-		if (agent.indexOf("msie") != -1) {
-			alert("IE 에서는 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.");
+		var IEVersionCheck = function() {
+			var word;
+			var version = "N/A";
+
+			var agent = navigator.userAgent.toLowerCase();
+			var name = navigator.appName;
+
+			// IE old version ( IE 10 or Lower )
+			if ( name == "Microsoft Internet Explorer" ) word = "msie ";
+
+			else {
+				// IE 11
+				if ( agent.search("trident") > -1 ) word = "trident/.*rv:";
+
+				// IE 12  ( Microsoft Edge )
+				else if ( agent.search("edge/") > -1 ) word = "edge/";
+			}
+
+			var reg = new RegExp( word + "([0-9]{1,})(\\.{0,}[0-9]{0,1})" );
+			if (  reg.exec( agent ) != null  )
+				version = RegExp.$1 + RegExp.$2;
+
+			return version;
+		};
+		if (!IEVersionCheck == "N/A") {
+			alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.")
+			location.href="chrome.google.com";
 		}
 	});
 	$('#library-search').bind("keyup", function(event) {
