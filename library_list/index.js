@@ -5,6 +5,30 @@ var $loading = $(".loading-icon");
 $collapse.collapse('hide');
 
 $(document).ready(function() {
+	var IEVersionCheck = function() {
+		var word;
+		var version = "N/A";
+
+		var agent = navigator.userAgent.toLowerCase();
+		var name = navigator.appName;
+
+		// IE old version ( IE 10 or Lower )
+		if ( name == "Microsoft Internet Explorer" ) word = "msie ";
+
+		else {
+			// IE 11
+			if ( agent.search("trident") > -1 ) word = "trident/.*rv:";
+
+			// IE 12  ( Microsoft Edge )
+			else if ( agent.search("edge/") > -1 ) word = "edge/";
+		}
+
+		var reg = new RegExp( word + "([0-9]{1,})(\\.{0,}[0-9]{0,1})" );
+		if (  reg.exec( agent ) != null  )
+			version = RegExp.$1 + RegExp.$2;
+
+		return version;
+	};
 	$('a').click(function(event) {
 		$('#loader').fadeIn("slow", function(){});
 		$('.need-reveal').addClass("hidden");
@@ -28,46 +52,21 @@ $(document).ready(function() {
 			$("#loader").fadeOut("slow", function(){});
 		});
 	});
-	$('#library-search').keyup(function(event) {
-		// console.log(event)
-		var IEVersionCheck = function() {
-			var word;
-			var version = "N/A";
-
-			var agent = navigator.userAgent.toLowerCase();
-			var name = navigator.appName;
-
-			// IE old version ( IE 10 or Lower )
-			if ( name == "Microsoft Internet Explorer" ) word = "msie ";
-
-			else {
-				// IE 11
-				if ( agent.search("trident") > -1 ) word = "trident/.*rv:";
-
-				// IE 12  ( Microsoft Edge )
-				else if ( agent.search("edge/") > -1 ) word = "edge/";
-			}
-
-			var reg = new RegExp( word + "([0-9]{1,})(\\.{0,}[0-9]{0,1})" );
-			if (  reg.exec( agent ) != null  )
-				version = RegExp.$1 + RegExp.$2;
-
-			return version;
-		};
+	$('#library-search').bind("keyup", function(event) {
+		var val = $(this).val();
 		if (!IEVersionCheck() == "N/A") {
 			alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.");
 			location.href="http://chrome.google.com";
+		} else {
+			$(".library_link").each(function() {
+				if ($(this).html().includes(val) == false) {
+					$(this).css("display", "none");
+				} else {
+					$(this).css("display", "block");
+				}
+			});
 		}
-	});
-	$('#library-search').bind("keyup", function(event) {
-		var val = $(this).val();
-		$(".library_link").each(function() {
-			if ($(this).html().includes(val) == false) {
-				$(this).css("display", "none");
-			} else {
-				$(this).css("display", "block");
-			}
-		});
+		
 	});
 
 	$("#manager-email").keydown(function (key) {
