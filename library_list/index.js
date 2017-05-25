@@ -54,18 +54,19 @@ $(document).ready(function() {
 	});
 	$('#library-search').bind("keyup", function(event) {
 		var val = $(this).val();
-		if (!IEVersionCheck() == "N/A") {
-			alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.");
-			location.href="http://chrome.google.com";
-		} else {
-			$(".library_link").each(function() {
-				if ($(this).html().includes(val) == false) {
-					$(this).css("display", "none");
-				} else {
-					$(this).css("display", "block");
-				}
-			});
-		}
+		
+			if (!IEVersionCheck() == "N/A") {
+				alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.");
+				location.href="http://chrome.google.com";
+			} else {
+				$(".library_link").each(function() {
+					if ($(this).html().indexOf(val) == -1) {
+						$(this).css("display", "none");
+					} else {
+						$(this).css("display", "block");
+					}
+				});
+			}
 		
 	});
 
