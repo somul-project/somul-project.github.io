@@ -28,7 +28,8 @@ $(document).ready(function() {
 			$("#loader").fadeOut("slow", function(){});
 		});
 	});
-	$('#library-search').click(function(evnet) {
+	$('#library-search').keyup(function(event) {
+		// console.log(event)
 		var IEVersionCheck = function() {
 			var word;
 			var version = "N/A";
@@ -53,9 +54,9 @@ $(document).ready(function() {
 
 			return version;
 		};
-		if (!IEVersionCheck == "N/A") {
-			alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.")
-			location.href="chrome.google.com";
+		if (!IEVersionCheck() == "N/A") {
+			alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.");
+			location.href="http://chrome.google.com";
 		}
 	});
 	$('#library-search').bind("keyup", function(event) {
