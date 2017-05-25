@@ -37,36 +37,43 @@ $(document).ready(function() {
 		sel_number = $(this).attr('id');
 		event.preventDefault();
 		$collapse.collapse('hide');
-		$.get("http://rainclab.net:4567/getLibraryData/" + sel_number, function(data) {
-			$('#collapse-name').html(data.library);
-			$('#manager-name').html(data.assigned_person['name']);
-			$('#manager-phone').html(data.assigned_person['telephone']);
-			['14', '15'].forEach(function(val, index, array) {
-				var info = data.information["h" + val];
-				['title', 'name', 'email', 'detail'].forEach(function(val2, index, array) {
-					$('#time-' + val + '-' + val2).html(info[val2]);
+		var xmlhttp = new XMLHttpRequest();
+		var url = "http://rainclab.net:4567/getLibraryData/" + sel_number + ".json";
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var data = JSON.parse(this.responseText);
+				$('#collapse-name').html(data.library);
+				$('#manager-name').html(data.assigned_person['name']);
+				$('#manager-phone').html(data.assigned_person['telephone']);
+				['14', '15'].forEach(function(val, index, array) {
+					var info = data.information["h" + val];
+					['title', 'name', 'email', 'detail'].forEach(function(val2, index, array) {
+						$('#time-' + val + '-' + val2).html(info[val2]);
+					});
 				});
-			});
-			$collapse.collapse('show');
-			$("body").stop().animate({scrollTop:0}, 1000, 'swing', function() {});
-			$("#loader").fadeOut("slow", function(){});
-		});
+				$collapse.collapse('show');
+				$("body").stop().animate({scrollTop:0}, 1000, 'swing', function() {});
+				$("#loader").fadeOut("slow", function(){});
+			}
+		};
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
 	});
 	$('#library-search').bind("keyup", function(event) {
 		var val = $(this).val();
 		
-			if (!IEVersionCheck() == "N/A") {
-				alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.");
-				location.href="http://chrome.google.com";
-			} else {
-				$(".library_link").each(function() {
-					if ($(this).html().indexOf(val) == -1) {
-						$(this).css("display", "none");
-					} else {
-						$(this).css("display", "block");
-					}
-				});
-			}
+		if (!IEVersionCheck() == "N/A") {
+			alert("Internet Explorer 에서는 해당 기능을 지원하지 않습니다. Chrome 브라우저를 설치해 주세요.");
+			location.href="http://chrome.google.com";
+		} else {
+			$(".library_link").each(function() {
+				if ($(this).html().indexOf(val) == -1) {
+					$(this).css("display", "none");
+				} else {
+					$(this).css("display", "block");
+				}
+			});
+		}
 		
 	});
 
@@ -94,27 +101,43 @@ function checkValid() {
 	}
 
 	$loading.removeClass("hidden");
-	$.get("http://rainclab.net:4567/infoValidation/" + sel_number + "?email=" + $email.val(), function(data) {
-		if (data.email_valid == false) {
-			$not.removeClass("hidden");
-			$not.html("E-mail이 올바르지 않습니다.");
-		} else {
-			var info = data.information;
+		
+		
+		
+	var xmlhttp = new XMLHttpRequest();
+	var url = "http://rainclab.net:4567/infoValidation/" + sel_number + "?email=" + $email.val();
+		
+		
+		
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var data = JSON.parse(this.responseText);
+			if (data.email_valid == false) {
+				$not.removeClass("hidden");
+				$not.html("E-mail이 올바르지 않습니다.");
+			} else {
+				var info = data.information;
 
-			$('#time-14-phone').html(info["h14"]);
-			$('#time-15-phone').html(info["h15"]);
-			['1', '2'].forEach(function(val, index, array) {
-				var temp = info["mc" + val].split(";");
-				['name', 'email', 'phone'].forEach(function(val2, index2, array2) {
-					$("#mc-" + val + "-" + val2).html(temp[index2]);
+				$('#time-14-phone').html(info["h14"]);
+				$('#time-15-phone').html(info["h15"]);
+				['1', '2'].forEach(function(val, index, array) {
+					var temp = info["mc" + val].split(";");
+					['name', 'email', 'phone'].forEach(function(val2, index2, array2) {
+						$("#mc-" + val + "-" + val2).html(temp[index2]);
+					});
 				});
-			});
 
-			$('.need-reveal').removeClass("hidden");
-			$('.need-hide').addClass('hidden');
-			$('#information-reveal').addClass("hidden");
-			$(".modal").modal('hide');
+				$('.need-reveal').removeClass("hidden");
+				$('.need-hide').addClass('hidden');
+				$('#information-reveal').addClass("hidden");
+				$(".modal").modal('hide');
+			}
+			$loading.addClass("hidden");
 		}
-		$loading.addClass("hidden");
-	});
+	}
+	
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+	
+
 }
