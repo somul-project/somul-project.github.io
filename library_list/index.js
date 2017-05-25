@@ -5,6 +5,7 @@ var $loading = $(".loading-icon");
 $collapse.collapse('hide');
 
 $(document).ready(function() {
+	
 	var IEVersionCheck = function() {
 		var word;
 		var version = "N/A";
@@ -29,6 +30,7 @@ $(document).ready(function() {
 
 		return version;
 	};
+	
 	$('a').click(function(event) {
 		$('#loader').fadeIn("slow", function(){});
 		$('.need-reveal').addClass("hidden");
