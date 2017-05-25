@@ -19,7 +19,7 @@ section {
     padding-left: 9.5%;
     padding-right: 9.5%;
 }
-.header-logo {background-image: url('../../dist/svg/header-logo.svg');height: 28px;width: 100px;background-repeat: no-repeat;background-size: 100% 100%;padding-bottom: 31px;display: block;padding-top: 83px;}
+.header-logo {background-image: url('../../dist/svg/header-logo.svg');height: 28px;width: 140px;background-repeat: no-repeat;background-size: 100% 100%;padding-bottom: 31px;display: block;padding-top: 103px;}
 
 .section-heading {
     width: 120px;
