@@ -22,5 +22,37 @@ $(document).ready(function() {
 		$('body').css('overflow', 'auto');
 	});
 	var setHeight = window.innerHeight;
-	$("#header").css("height", setHeight)
+	$("#header").css("height", setHeight);
+	var IEVersionCheck = function() {
+		var word;
+		var version = "N/A";
+
+		var agent = navigator.userAgent.toLowerCase();
+		var name = navigator.appName;
+
+		// IE old version ( IE 10 or Lower )
+		if ( name == "Microsoft Internet Explorer" ) word = "msie ";
+
+		else {
+			// IE 11
+			if ( agent.search("trident") > -1 ) word = "trident/.*rv:";
+
+			// IE 12  ( Microsoft Edge )
+			else if ( agent.search("edge/") > -1 ) word = "edge/";
+		}
+
+		var reg = new RegExp( word + "([0-9]{1,})(\\.{0,}[0-9]{0,1})" );
+		if (  reg.exec( agent ) != null  )
+			version = RegExp.$1 + RegExp.$2;
+
+		return version;
+	};
+
+	var IEVersion = IEVersionCheck()
+	if (IEVersion == "N/A") {
+		// alert("Chrome")
+	} else {
+		$("body").addClass("ie-support")
+		// alert("IE")
+	}
 })
