@@ -110,12 +110,20 @@ ul.topmenu-buttons {
     border-bottom: 1px solid #0E3691;
     width: 516px;
 }
-
+.font-weight-bold {
+    font-weight : bold;
+}
+p.text-center.newer-notice {
+    font-size: 18px;
+    padding-bottom: 15px;
+}
 .header-menu {
     /* width: 577px; */
     /* padding-top: 88px; */
 }
-
+ul.topmenu-buttons li:nth-child(3) {
+	width: 112px;
+}
 ul.topmenu-buttons li {
     width: 112px;
     display: inline-block;
@@ -128,8 +136,12 @@ ul.topmenu-buttons li a {
     text-decoration: none;
 }
 
+ul.topmenu-buttons li:nth-child(4) {
+    width: 98px;
+}
 ul.topmenu-buttons li:nth-last-child(1) {
-    width: 52px;
+	width: 66px;
+	text-align: right;
 }
 
 .header-heading h3 {
