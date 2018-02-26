@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$("#main_modal").modal();
 	$('.topmenu-buttons li').click(function(event) {
 		event.preventDefault();
 		$('html,body').animate({
