@@ -1,0 +1,35 @@
+{
+    "useful-link": {
+        "name": "유용한 링크들",
+        "type": "link",
+        "lists": [
+            {
+                "name": "name1",
+                "link": "link1"    
+            },
+            {
+                "name": "name2",
+                "link": "link2"    
+            },
+            {
+                "name": "name3",
+                "link": "link3"    
+            }
+        ]
+    },
+    "faq-a": {
+        "name": "A. 소프트웨어에 물들다 FAQ",
+        "type": "move",
+        "link-id": "A",
+        "lists": [
+            {
+                "name": "1. [소프트웨어에 물들다는 어떤 행사인가요?]",
+                "content": "content"
+            },
+            {
+                "name": "2. [소프트웨어에 물들다는 왜 하는 겁니까?]",
+                "content": "content"
+            }
+        ]
+    }
+}
