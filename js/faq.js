@@ -1,5 +1,6 @@
 
-var app = document.getElementById("app");
+var divLinkContent = document.getElementById("link-content");
+var divContent     = document.getElementById("content");
 
 // TODO: url must be changed when deploy main server
 var jsonUrl = "https://raw.githubusercontent.com/clucle/somul-project.github.io/feature/md_to_html/web-inf/faq.json";
@@ -30,8 +31,6 @@ function renderByJsonUrl(url) {
             }
         }
     });
-    
-    app.innerHTML = "may be contents here";
 }
 
 renderByJsonUrl(jsonUrl);
