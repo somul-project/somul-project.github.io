@@ -21,13 +21,38 @@ var getJSON = function(url, callback) {
     xhr.send();
 };
 
+function textToTitleText(text) {
+    return "<h2>" + text + "</h2>";
+}
+
+function textToPlainText(text) {
+    return "<p>" + text + "</p>"
+}
+
+
+function getLinkText(name, link) {
+    return "<li><a href=\"" + link + "\">" + name + "</a></li>";
+}
+
 function renderByJsonUrl(url) {
-    
     getJSON(url, function(err, data) {
         if (err !== null) {
         } else {
             for (var item in data) {
-                console.log(item);
+                
+                divLinkContent.innerHTML += textToTitleText(data[item].name);
+
+                if (data[item].type == "link") {
+                    divLinkContent.innerHTML += "<ul>"
+                    data[item].lists.forEach(function(item, index) {
+                        divLinkContent.innerHTML += getLinkText(item.name, item.link);
+                    });
+                    divLinkContent.innerHTML += "</ul>"
+                    
+                } else if (data[item].type == "move") {
+
+                }
+
             }
         }
     });
