@@ -22,16 +22,28 @@ var getJSON = function(url, callback) {
 };
 
 function textToTitleText(text) {
-    return "<h2>" + text + "</h2>";
+    return "<h2>" + text + "</h2><br />";
 }
 
 function textToPlainText(text) {
-    return "<p>" + text + "</p>"
+    return "<p>" + text + "</p><br />"
+}
+
+function prefixAppendIndex(text, index) {
+    return index + ". " + text;
+}
+
+function prefixAppendLinkIdAndIndex(text, linkId, index) {
+    return linkId + "." + (index + 1) + " " + text;
 }
 
 
 function getLinkText(name, link) {
     return "<li><a href=\"" + link + "\">" + name + "</a></li>";
+}
+
+function getMoveText(name, linkId, index) {
+    return "<li><a href=#\"" + linkId + index + "\">" + (index + 1) + ". " + name + "</a></li>";
 }
 
 function renderByJsonUrl(url) {
@@ -50,7 +62,20 @@ function renderByJsonUrl(url) {
                     divLinkContent.innerHTML += "</ul>"
                     
                 } else if (data[item].type == "move") {
+                    divLinkContent.innerHTML += "<ul>"
 
+                    divContent.innerHTML += textToTitleText(data[item].name);
+                    divContent.innerHTML += textToPlainText(data[item].description);
+
+                    var linkId = data[item].linkId;
+                    data[item].lists.forEach(function(item, index) {
+                        
+                        divLinkContent.innerHTML += getMoveText(item.name, linkId, index);
+
+                        divContent.innerHTML += textToTitleText(prefixAppendLinkIdAndIndex(item.name, linkId, index)); 
+                        divContent.innerHTML += textToPlainText(item.content); 
+                    });
+                    divLinkContent.innerHTML += "</ul>"
                 }
 
             }
