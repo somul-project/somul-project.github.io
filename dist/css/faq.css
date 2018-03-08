@@ -32,6 +32,12 @@ ul li a {
     margin: 0 auto;
 }
 
+.faqlink {
+    font-weight: bold;
+    text-decoration: none !important;
+    color: #d9230f;
+}
+
 #app {
     background: #f1f1f1;
 }

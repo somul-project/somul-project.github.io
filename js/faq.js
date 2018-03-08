@@ -38,7 +38,7 @@ function prefixAppendIndex(text, index) {
 }
 
 function prefixAppendLinkIdAndIndex(text, linkId, index) {
-    return '<div id="' + linkId + index + '" style="position:relative;top:-20px;visibility:hidden"></div>' 
+    return '<div id="' + linkId + (index + 1) + '" style="position:relative;top:-20px;visibility:hidden"></div>' 
         + textToSubTitleText(linkId + "." + (index + 1) + " " + text);
 }
 
@@ -48,7 +48,7 @@ function getLinkText(name, link) {
 }
 
 function getMoveText(name, linkId, index) {
-    return "<li><a href=\"#" + linkId + index + "\">" + (index + 1) + ". " + name + "</a></li>";
+    return "<li><a href=\"#" + linkId + (index + 1) + "\">" + (index + 1) + ". " + name + "</a></li>";
 }
 
 function renderByJsonUrl(url) {
