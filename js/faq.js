@@ -22,11 +22,11 @@ var getJSON = function(url, callback) {
 };
 
 function textToTitleText(text) {
-    return "<h2>" + text + "</h2><br />";
+    return "<h2>" + text + "</h2>";
 }
 
 function textToPlainText(text) {
-    return "<p>" + text + "</p><br />"
+    return "<p>" + text + "</p>"
 }
 
 function prefixAppendIndex(text, index) {
@@ -34,7 +34,7 @@ function prefixAppendIndex(text, index) {
 }
 
 function prefixAppendLinkIdAndIndex(text, linkId, index) {
-    return linkId + "." + (index + 1) + " " + text;
+    return '<div id="' + linkId + index + '" style="position:relative;top:-20px;visibility:hidden"></div>' + textToTitleText(linkId + "." + (index + 1) + " " + text);
 }
 
 
@@ -43,7 +43,7 @@ function getLinkText(name, link) {
 }
 
 function getMoveText(name, linkId, index) {
-    return "<li><a href=#\"" + linkId + index + "\">" + (index + 1) + ". " + name + "</a></li>";
+    return "<li><a href=\"#" + linkId + index + "\">" + (index + 1) + ". " + name + "</a></li>";
 }
 
 function renderByJsonUrl(url) {
@@ -54,15 +54,14 @@ function renderByJsonUrl(url) {
                 
                 divLinkContent.innerHTML += textToTitleText(data[item].name);
 
+                var linkText = "<ul>"
+
                 if (data[item].type == "link") {
-                    divLinkContent.innerHTML += "<ul>"
                     data[item].lists.forEach(function(item, index) {
-                        divLinkContent.innerHTML += getLinkText(item.name, item.link);
+                        linkText += getLinkText(item.name, item.link);
                     });
-                    divLinkContent.innerHTML += "</ul>"
-                    
                 } else if (data[item].type == "move") {
-                    divLinkContent.innerHTML += "<ul>"
+                    
 
                     divContent.innerHTML += textToTitleText(data[item].name);
                     divContent.innerHTML += textToPlainText(data[item].description);
@@ -70,14 +69,15 @@ function renderByJsonUrl(url) {
                     var linkId = data[item].linkId;
                     data[item].lists.forEach(function(item, index) {
                         
-                        divLinkContent.innerHTML += getMoveText(item.name, linkId, index);
+                        linkText += getMoveText(item.name, linkId, index);
 
-                        divContent.innerHTML += textToTitleText(prefixAppendLinkIdAndIndex(item.name, linkId, index)); 
+                        divContent.innerHTML += prefixAppendLinkIdAndIndex(item.name, linkId, index); 
                         divContent.innerHTML += textToPlainText(item.content); 
                     });
-                    divLinkContent.innerHTML += "</ul>"
                 }
 
+                linkText += "</ul>";
+                divLinkContent.innerHTML += linkText
             }
         }
     });
