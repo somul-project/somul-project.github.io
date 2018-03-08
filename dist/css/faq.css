@@ -11,6 +11,20 @@ h3 {
     padding: 8px 0;
 }
 
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding-bottom: 12px;
+}
+
+ul li a {
+    font-weight: bold;
+    text-decoration: none !important;
+    color: #d9230f;
+}
+
 .container {
     width: 68%;
     min-width: 480px;

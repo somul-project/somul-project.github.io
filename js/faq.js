@@ -25,6 +25,10 @@ function textToTitleText(text) {
     return "<h2>" + text + "</h2>";
 }
 
+function textToSubTitleText(text) {
+    return "<h3>" + text + "</h3>";
+}
+
 function textToPlainText(text) {
     return "<p>" + text + "</p>"
 }
@@ -34,7 +38,8 @@ function prefixAppendIndex(text, index) {
 }
 
 function prefixAppendLinkIdAndIndex(text, linkId, index) {
-    return '<div id="' + linkId + index + '" style="position:relative;top:-20px;visibility:hidden"></div>' + textToTitleText(linkId + "." + (index + 1) + " " + text);
+    return '<div id="' + linkId + index + '" style="position:relative;top:-20px;visibility:hidden"></div>' 
+        + textToSubTitleText(linkId + "." + (index + 1) + " " + text);
 }
 
 
@@ -62,10 +67,10 @@ function renderByJsonUrl(url) {
                     });
                 } else if (data[item].type == "move") {
                     
-
+                    divContent.innerHTML += "<br /><hr><br />";
                     divContent.innerHTML += textToTitleText(data[item].name);
                     divContent.innerHTML += textToPlainText(data[item].description);
-
+                    divContent.innerHTML += "<br />";
                     var linkId = data[item].linkId;
                     data[item].lists.forEach(function(item, index) {
                         
