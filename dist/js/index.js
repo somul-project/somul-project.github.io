@@ -55,4 +55,6 @@ $(document).ready(function() {
 		$("body").addClass("ie-support")
 		// alert("IE")
 	}
+
+	$("#library_modal").modal();
 })
