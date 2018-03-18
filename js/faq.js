@@ -2,7 +2,7 @@
 var divLinkContent = document.getElementById("link-content");
 var divContent     = document.getElementById("content");
 
-var jsonUrl = "https://raw.githubusercontent.com/somul-project/somul-project.github.io/master/web-inf/faq.json";
+var jsonUrl = "web-inf/faq.json";
 
 var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
