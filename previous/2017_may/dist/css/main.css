@@ -1,15 +1,14 @@
 body {
-    color: #000;
-    letter-spacing: -.1em;
+    color : #0E3691
 }
 
 header#header {
-    background-image: url('../../dist/svg/header2.svg');
-    background-size: contain;
+    background-image: url('../../dist/svg/header.svg');
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(242, 238, 179);
+    height: 972px;
+    background-color: #CECECD;
     margin-bottom: 62px;
     padding-left: 7.5%;
     padding-right: 7.5%;
@@ -20,27 +19,22 @@ section {
     padding-left: 9.5%;
     padding-right: 9.5%;
 }
-
-.header-logo {
-    background-image: url('../../dist/svg/header-logo.svg');
-    height: 28px;
-    width: 140px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-bottom: 31px;
-    display: block;
-    padding-top: 103px;
-}
+.header-logo {background-image: url('../../dist/svg/header-logo.svg');height: 28px;width: 140px;background-repeat: no-repeat;background-size: 100% 100%;padding-bottom: 31px;display: block;padding-top: 103px;}
 
 .section-heading {
+    width: 120px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    background-color: #F4BC1C;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .section-detail {
     padding-left: 120px;
     padding-right: 120px;
-    padding-top: 3px;
+    padding-top: 38px;
     display: inline-block;
     width: 100%;
 }
@@ -113,6 +107,8 @@ ul.topmenu-buttons {
     list-style: none;
     padding: 0;
     margin: 0;
+    border-bottom: 1px solid #0E3691;
+    width: 516px;
 }
 
 .header-menu {
@@ -128,7 +124,7 @@ ul.topmenu-buttons li {
 }
 
 ul.topmenu-buttons li a {
-    color: rgb(205, 70, 64);
+    color: #0E3691;
     text-decoration: none;
 }
 
@@ -146,8 +142,8 @@ ul.topmenu-buttons li:nth-last-child(1) {
 }
 
 span.introduce-heading {
-    font-size: 40px;
-    font-weight: 300;
+    font-size: 25px;
+    font-weight: 500;
     display: block;
     margin-bottom: 40px;
 }
@@ -233,6 +229,8 @@ blockquote ol li {
     padding-right: 0;
 }
 
+
+
 .section-big-item:nth-child(2) {
 }
 
@@ -245,35 +243,30 @@ section#introduce {
 }
 
 .section-item:nth-child(4) {
-    padding-right: 0;
+    padding-right:0;
 }
 
+
 body.ie-support header#header {
-    background-size: 150% 150%;
-    background-position-x: 33%
+	background-size : 150% 150%;
+	background-position-x : 33%
 }
 
 body.ie-support ul.topmenu-buttons li {
-    width: 111px;
+	width: 111px;
 }
-
-body.ie-support ul.topmenu-buttons li:nth-last-child(1) {
-    width: 56px;
+body.ie-support ul.topmenu-buttons li:nth-last-child(1)  {
+	width : 56px;
 }
 
 .font-weight-bold {
-    font-weight: bold;
+    font-weight : bold;
 }
-
 p.text-center.newer-notice {
     font-size: 18px;
     padding-bottom: 15px;
 }
 
-::selection {
-    background-color: rgba(205, 71, 64, 0.8);
-    color: #ffffff;
-}
 
 @media all and (max-width: 1280px) {
 }
@@ -307,7 +300,7 @@ p.text-center.newer-notice {
     }
 
     .section-item {
-        width: 100%;
+        width : 100%;
         padding: 0;
     }
 
@@ -334,10 +327,12 @@ p.text-center.newer-notice {
     }
 
     header#header {
+        background-position-x: 100%;
+        background-position-y: 221px;
     }
 
     .section-small-item-label {
-        width: 100%;
+        width : 100%;
         font-weight: bold;
     }
 
@@ -346,33 +341,32 @@ p.text-center.newer-notice {
     }
 
     .section-item-heading {
-        font-weight: bold;
+        font-weight : bold;
     }
 }
+
 
 @media all and (max-width: 384px) {
-    ul.topmenu-buttons li {
-        font-size: 10px;
-    }
-
-    ul.topmenu-buttons li:nth-last-child(1) {
-        width: auto;
-    }
-
-    header#header {
-        background-position-y: 271px;
-    }
+	ul.topmenu-buttons li {
+		font-size:10px;
+	}
+	ul.topmenu-buttons li:nth-last-child(1) {
+		width: auto;
+	}
+	header#header {
+		    background-position-y: 271px;
+	}
 }
 
-@media all and (max-width: 320px ) {
-    ul.topmenu-buttons li {
-
-        width: 19.9%;
-    }
+@media all and (max-width:320px ) {
+	ul.topmenu-buttons li {
+	
+		width: 19.9%;
+	}
 }
 
-@media all and (max-width: 412px ) {
-    ul.topmenu-buttons li {
-        width: 19.8%;
-    }
+@media all and (max-width:412px ) {
+	ul.topmenu-buttons li {
+		    width: 19.8%;
+	}
 }
