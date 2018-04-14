@@ -334,6 +334,7 @@ p.text-center.newer-notice {
     }
 
     header#header {
+        background-position-y: 221px;
     }
 
     .section-small-item-label {
@@ -360,7 +361,6 @@ p.text-center.newer-notice {
     }
 
     header#header {
-        background-position-y: 271px;
     }
 }
 
