@@ -1,14 +1,14 @@
 $(document).ready(function() {
-  $('nav ul li').click(function(event) {
-		event.preventDefault();
-		$('html,body').animate({
-			scrollTop: $($(this).find('a').attr('href')).offset().top
-		}, "easeInCirc");
-    if($('nav .menu').css('display') != 'none') {
-      $('nav ul').addClass('hidetoggle');
-      $('nav').css('height', '20px');
-    }
-	});
+  // $('nav ul li').click(function(event) {
+	// 	event.preventDefault();
+	// 	$('html,body').animate({
+	// 		scrollTop: $($(this).find('a').attr('href')).offset().top
+	// 	}, "easeInCirc");
+  //   if($('nav .menu').css('display') != 'none') {
+  //     $('nav ul').addClass('hidetoggle');
+  //     $('nav').css('height', '20px');
+  //   }
+	// });
 
   $('nav').affix({
     offset: {
