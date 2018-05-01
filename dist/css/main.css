@@ -21,6 +21,36 @@ section {
     padding-right: 9.5%;
 }
 
+section#faq {
+    background: rgb(242, 238, 179);
+}
+
+section#faq span.introduce-heading {
+    background: #ffffff;
+    border: 1px solid #f5f5f5;
+    padding: 5%;
+    transition: all .5s ease;
+}
+
+section#faq span.introduce-heading:hover {
+    background: #f5f5f5;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+section#faq a {
+    color: #000000;
+    text-decoration: none;
+}
+
+section#faq a:hover {
+    text-decoration: none;
+}
+
+section#faq small {
+    display: block;
+    font-size: 0.5em;
+}
+
 .header-logo {
     background-image: url('../../dist/svg/header-logo.svg');
     height: 28px;
@@ -284,7 +314,13 @@ p.text-center.newer-notice {
     }
 }
 
-@media all and (max-width: 991px) {
+@media all and (max-width: 1000px) {
+    section#faq b {
+        display: block;
+    }
+}
+
+@media all and (max-width: 1200px) {
     section#introduce {
         width: initial
     }
