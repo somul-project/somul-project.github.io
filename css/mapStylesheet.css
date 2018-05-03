@@ -1,0 +1,117 @@
+#mapview {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    margin-left: 30%;
+    display: inline-block;
+    float: left;
+}
+
+#content-library {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#content-library li {
+    margin: 0;
+    padding: 0;
+}
+
+.list-wrapper {
+    background: #ffffff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    height: 100%;
+    width: 30%;
+    float: left;
+    position: absolute;
+    z-index: 2;
+}
+
+.library-list-header {
+    border: 1.5px solid #f5f5f5;
+    background-color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    padding: 7%;
+    position: relative;
+    transition: all .5s ease;
+}
+
+.library-list-header > p {
+    margin: 0;
+    padding: 0;
+}
+
+.icon-back {
+    display: none;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    position: absolute;
+    padding: 7%;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.icon-back:hover {
+    background: #f5f5f5;
+}
+
+.library-list {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.city-name {
+    border: 1px solid #f5f5f5;
+    border-top: 0;
+    background-color: #ffffff;
+    padding: 7%;
+    transition: all .5s ease;
+}
+
+.city-name > p {
+    margin: 0;
+    padding: 0;
+}
+
+.city-name:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.libraries {
+    display: none;
+}
+
+.libraries > div {
+    border: 1px solid #f5f5f5;
+    border-top: 0;
+    color: #000000;
+    display: block;
+    text-decoration: none;
+    padding: 7%;
+    transition: all .5s ease;
+}
+
+.libraries > div:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.libraries > div > p {
+    margin: 0;
+    padding: 0;
+}
+
+.library-info {
+    display: none;
+}
+
+.library-info p {
+    margin: 0;
+    padding: 7% 0 0;
+}

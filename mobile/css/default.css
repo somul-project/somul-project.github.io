@@ -1,0 +1,80 @@
+html, body {
+    background: #fff8ca;
+    letter-spacing: -0.06rem;
+}
+
+body {
+    padding-top: 50px;
+}
+
+h4, b {
+    color: #cf453b;
+}
+
+hr {
+    border-color: #000000;
+    margin: 0;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+}
+
+.footer > div > div {
+    padding: 20px 0 20px 0;
+}
+
+.content-image {
+    max-width: 70%;
+}
+
+.media-object {
+    width: 32px;
+}
+
+#mapview {
+    position: absolute;
+    height: calc(65% - 50px);
+    width: 100%;
+    margin-left: 0 !important;
+    display: inline-block;
+}
+
+.list-wrapper {
+    bottom: 0;
+    height: 35%;
+    width: 100% !important;
+}
+
+.library-list-header, .city-name, .libraries > div {
+    padding: 3%;
+}
+
+.library-info p {
+    padding: 0;
+}
+
+.icon-back {
+    left: auto;
+    top: auto;
+    padding: 0;
+}
+
+.qna {
+    color: #000000;
+    text-decoration: none;
+}
+
+.qna:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.faqlink {
+    font-weight: 500;
+    margin: 0;
+    color: #ff7f00;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
