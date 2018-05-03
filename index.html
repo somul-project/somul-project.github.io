@@ -18,8 +18,17 @@
           type='text/css'>
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/mapStylesheet.css">
-    <link rel="shortcut icon" href="http://somul.kr/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="http://somul.kr/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" language="JavaScript">
+        var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'Windows CE;', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson', 'Mobile', 'Symbian', 'Opera Mobi', 'Opera Mini', 'IEmobile');
+        for (var word in mobileKeyWords) {
+            if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
+                window.location.href = "http://somul.kr/mobile/";
+                break;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -79,11 +88,11 @@
     <div id="content-library" class="content hide" style="width:100%">
         <h1>지도 기능은 5월 6일날 오픈합니다.</h1>
         <!--<div class="list-wrapper">-->
-            <!--<div class="library-list-header">-->
-                <!--<img class="icon-back" src="./resources/icon/back.png" alt="뒤로가기" onclick="goBack()">-->
-                <!--<p>원하는 지역을 선택해주세요.</p>-->
-            <!--</div>-->
-            <!--<div class="library-list"></div>-->
+        <!--<div class="library-list-header">-->
+        <!--<img class="icon-back" src="./resources/icon/back.png" alt="뒤로가기" onclick="goBack()">-->
+        <!--<p>원하는 지역을 선택해주세요.</p>-->
+        <!--</div>-->
+        <!--<div class="library-list"></div>-->
         <!--</div>-->
         <!--<div id="mapview"></div>-->
     </div>
