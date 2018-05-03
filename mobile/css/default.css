@@ -21,8 +21,14 @@ hr {
     width: 100%;
 }
 
-.footer > div > div {
-    padding: 20px 0 20px 0;
+.footer > div {
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.footer > div a {
+    color: #ff7f00;
 }
 
 .content-image {
