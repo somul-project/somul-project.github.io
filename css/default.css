@@ -382,3 +382,8 @@ a {
     height: 95px;
     float: left;
 }
+
+::selection {
+    background-color: rgba(205, 71, 64, 0.8);
+    color: #ffffff;
+}
