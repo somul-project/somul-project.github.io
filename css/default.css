@@ -118,7 +118,6 @@ td {
 }
 
 #content-faq.show {
-    border: 4px dotted rgba(0, 0, 0, 0.7);
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -127,7 +126,6 @@ td {
 }
 
 #content-faq.hide {
-    border: 4px dotted rgba(0, 0, 0, 0.0);
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
