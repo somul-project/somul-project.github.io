@@ -26,7 +26,7 @@ function textToSmallTitle(num, text) {
         '<img style="width: 33px; height: 63px; margin: 16px 21px 16px 101px;" src="./resources/faq-bottom-' + num + '.png">' +
         '</div>' +
         '<div class="faq-small-title-text">' +
-        '<div class="vcenter">' +
+        '<div class="vcenter" style="vertical-align: middle;">' +
         '<h2 class="faq-h2t">' + text + '</h2>' +
         '</div>' +
         '</div>' +
