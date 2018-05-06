@@ -74,8 +74,9 @@ function setBoundsMap(flag) {
             library.city = library.location.road.split(" ")[0];
             library.marker = new daum.maps.Marker({position: library.coords});
             generateLibraryInfo(library);
+            library.marker.setMap(map);
         }
-        
+
         (flag) ? library.marker.setMap(map) : null;
 
         library.marker.setImage(defaultMarkerImage);
@@ -90,6 +91,9 @@ $(window).on("load", function () {
     $.ajax({
         type: 'get',
         url: "http://apply.somul.kr/api/v1/map",
+        beforeSend: function () {
+            $("#preloader-area").css("display", "block");
+        },
         success: function (response) {
             libraryData = response;
             for (var i = 0; i < libraryData.length; i++) {
@@ -98,6 +102,10 @@ $(window).on("load", function () {
                     libraryData.splice(i--, 1);
                 }
             }
+
+            $("#preloader-area").fadeOut();
+            $(".section-library").fadeIn();
+
             generateMap();
             setBoundsMap();
         },

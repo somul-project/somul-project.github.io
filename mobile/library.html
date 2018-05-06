@@ -20,9 +20,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/mapStylesheet.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="../css/preloader.css">
 
-    <link rel="shortcut icon" href="http://somul.kr/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="http://somul.kr/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
 
     <style type="text/css">
         html, body {
@@ -36,6 +37,13 @@
     <![endif]-->
 </head>
 <body>
+
+<div id="preloader-area">
+    <div class="sk-double-bounce">
+        <div class="sk-child sk-double-bounce1"></div>
+        <div class="sk-child sk-double-bounce2"></div>
+    </div>
+</div>
 
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -63,7 +71,7 @@
     </nav>
 </header>
 
-<section>
+<section class="section-library" style="display: none">
     <div>
         <div id="mapview"></div>
         <div class="list-wrapper">
