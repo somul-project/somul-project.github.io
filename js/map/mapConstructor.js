@@ -11,24 +11,17 @@ function changeListHeader(header) {
     $(".library-list-header > p").text(header);
 }
 
-function getPosition() {
-    var rndlat = Math.floor(Math.random() * 100) / 1000;
-    rndlat *= (rndlat % 2) ? 1 : -1;
-
-    var rndlng = Math.floor(Math.random() * 100) / 1000;
-    rndlng *= (rndlng % 2) ? 1 : -1;
-
-    return new daum.maps.LatLng(37.6 + rndlat, 127 + rndlng);
-}
-
 function generateMap() {
     var container = document.getElementById('mapview'); //지도를 담을 영역의 DOM 레퍼런스
     var options = { //지도를 생성할 때 필요한 기본 옵션
         center: new daum.maps.LatLng(37.6, 127), //지도의 중심좌표.
-        level: 1 //지도의 레벨(확대, 축소 정도)
+        level: 13
     };
 
     map = new daum.maps.Map(container, options); // 지도 호출
+
+    map.setDraggable(false);
+    map.setZoomable(false);
 }
 
 function checkNull(sentence) {
@@ -67,29 +60,30 @@ function generateLibraryInfo(library) {
     );
 }
 
-function setBoundsMap() {
+function setBoundsMap(flag) {
+    var flag = typeof flag !== 'undefined' ? flag : false;
     var bounds = new daum.maps.LatLngBounds();
 
     var library = null;
+
     for (var i = 0; i < libraryData.length; i++) {
         library = libraryData[i];
 
         if (library.marker === undefined) {
-            library.coords = getPosition();
-            library.city = "a";
-            generateLibraryInfo(library);
+            library.coords = new daum.maps.LatLng(library.location.latitude, library.location.longitude);
+            library.city = library.location.road.split(" ")[0];
             library.marker = new daum.maps.Marker({position: library.coords});
+            generateLibraryInfo(library);
         }
+        
+        (flag) ? library.marker.setMap(map) : null;
 
         library.marker.setImage(defaultMarkerImage);
-        library.marker.setMap(map);
         // LatLngBounds 객체에 좌표를 추가합니다
         bounds.extend(library.coords);
     }
 
     map.setBounds(bounds); // 중심으로 이동
-    map.setDraggable(false);
-    map.setZoomable(false);
 }
 
 $(window).on("load", function () {
@@ -98,6 +92,12 @@ $(window).on("load", function () {
         url: "http://apply.somul.kr/api/v1/map",
         success: function (response) {
             libraryData = response;
+            for (var i = 0; i < libraryData.length; i++) {
+                if (libraryData[i].location.latitude === "None" || libraryData[i].location.longitude === "None") {
+                    console.log(libraryData[i]);
+                    libraryData.splice(i--, 1);
+                }
+            }
             generateMap();
             setBoundsMap();
         },
