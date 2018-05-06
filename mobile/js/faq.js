@@ -26,6 +26,7 @@ function renderByJsonUrl(url) {
         if (err !== null) {
         } else {
             for (var item in faq) {
+                liContent = "";
                 if (item.type !== "move") {
                     content += "<ol>" +
                         "<h3>" + faq[item].name + "</h3>" +
