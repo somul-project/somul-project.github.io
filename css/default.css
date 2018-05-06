@@ -301,7 +301,7 @@ p.plane-text {
 }
 
 .faq-small-title-text {
-    width: 943px;
+    width: 800px;
     height: 95px;
     display: table;
     overflow: hidden;
@@ -384,4 +384,32 @@ a {
 ::selection {
     background-color: rgba(205, 71, 64, 0.8);
     color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.5);
+    -webkit-border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0,0,0,0.61); / Some darker color when you click it */
+    -webkit-border-radius: 100px;
+}
+
+/* add vertical min-height & horizontal min-width */
+::-webkit-scrollbar-thumb:vertical {
+  min-height: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  min-width: 10px;
 }
