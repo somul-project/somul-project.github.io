@@ -103,8 +103,10 @@ $(window).on("load", function () {
                 }
             }
 
+            $("#preloader").fadeOut();
             $("#preloader-area").fadeOut();
-            $(".section-library").fadeIn();
+
+            $("#preload-hide").fadeIn();
 
             generateMap();
             setBoundsMap();
