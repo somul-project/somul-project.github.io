@@ -18,6 +18,7 @@
           type='text/css'>
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/mapStylesheet.css">
+    <link rel="stylesheet" href="./css/preloader.css">
     <link rel="shortcut icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
     <link rel="icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
     <script type="text/javascript" language="JavaScript">
@@ -32,7 +33,16 @@
 </head>
 
 <body>
-<div id="wrapper">
+<div id="preloader">
+    <div id="preloader-area">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+</div>
+
+<div id="wrapper preload-hide">
     <div id="header">
         <div id="header-content">
             <div id="header-content-left">
@@ -86,15 +96,14 @@
     </div>
 
     <div id="content-library" class="content hide" style="width:100%">
-        <h1>지도 기능은 5월 6일날 오픈합니다.</h1>
-        <!--<div class="list-wrapper">-->
-        <!--<div class="library-list-header">-->
-        <!--<img class="icon-back" src="./resources/icon/back.png" alt="뒤로가기" onclick="goBack()">-->
-        <!--<p>원하는 지역을 선택해주세요.</p>-->
-        <!--</div>-->
-        <!--<div class="library-list"></div>-->
-        <!--</div>-->
-        <!--<div id="mapview"></div>-->
+        <div class="list-wrapper">
+            <div class="library-list-header">
+                <img class="icon-back" src="./resources/icon/back.png" alt="뒤로가기" onclick="goBack()">
+                <p>원하는 지역을 선택해주세요.</p>
+            </div>
+            <div class="library-list"></div>
+        </div>
+        <div id="mapview"></div>
     </div>
 
     <div id="content-donate" class="content hide">
@@ -159,7 +168,8 @@
                             <p class="plane-text">후원하신 현금은 강의 진행에 필요한 소모품, 장비 및 기타 경비,
                                 우편료, 도메인 유지비, 행사 후 뒤풀이 비용 등으로 사용됩니다.<br>
                                 <mark>현금 후원의 경우, 사단법인 코드클럽한국위원회 명의의 기부금 영수증을 발행해드립니다.
-                                자세한 내용은 관계자 메일로 문의 부탁드립니다.</mark>
+                                    자세한 내용은 관계자 메일로 문의 부탁드립니다.
+                                </mark>
                             </p>
                         </div>
                     </div>
@@ -267,11 +277,11 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="./js/main.js"></script>
-<script src="./js/faq.js"></script>
 <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=172283aea22a2859764d0f5c96a12445&libraries=services"></script>
 <script src="./js/map/mapConstructor.js"></script>
 <script src="./js/map/mapControlList.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+<script src="./js/faq.js"></script>
 
 </html>

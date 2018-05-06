@@ -46,16 +46,17 @@ function changeScreen(newClicked) {
 
     hideScreen(clicked);
     setTimeout(function () {
-        showScreen(newClicked)
+        showScreen(newClicked);
     }, 400);
 
     setTimeout(function () {
         isAnimated = 0;
         clicked = newClicked;
         generateMap();
-        setBoundsMap();
+        setBoundsMap(true);
         if (clicked !== saveClicked) changeScreen(saveClicked);
     }, 800);
+
 }
 
 function showScreen(i) {
