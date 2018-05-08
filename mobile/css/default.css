@@ -41,15 +41,15 @@ hr {
 
 #mapview {
     position: absolute;
-    height: calc(65% - 50px);
+    height: 55%;
     width: 100%;
     margin-left: 0 !important;
     display: inline-block;
 }
 
 .list-wrapper {
-    bottom: 0;
-    height: 35%;
+    top: calc(60% + 1px);
+    height: 29%;
     width: 100% !important;
 }
 
