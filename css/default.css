@@ -216,11 +216,11 @@ p.content-right-text {
 }
 
 .content.hide {
-    max-height: 0;
+    display: none;
 }
 
 .content.show {
-    max-height: 670px;
+   display: block;
 }
 
 .box-img_title_content {
