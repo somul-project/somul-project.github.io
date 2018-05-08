@@ -246,7 +246,6 @@ p.donate {
     font-family: 'Noto Sans Korean', sans-serif;
     font-weight: 300;
     line-height: 26px;
-    letter-spacing: -1;
     font-size: 15px;
 }
 
@@ -268,7 +267,6 @@ p.plane-text {
     font-family: 'Noto Sans Korean', sans-serif;
     font-size: 13px;
     line-height: 26px;
-    letter-spacing: -1;
     margin: 0;
 
 }
@@ -318,7 +316,6 @@ p.plane-text {
     font-weight: 600;
     margin: 0;
     padding-left: 150px;
-    letter-spacing: -1;
     margin-bottom: 10px;
 }
 
@@ -328,7 +325,6 @@ p.plane-text {
     font-weight: 400;
     margin: 10px 0;
     padding-left: 185px;
-    letter-spacing: -1;
 }
 
 .faq-p {
@@ -338,7 +334,6 @@ p.plane-text {
     margin: 0;
     padding-left: 185px;
     padding-right: 100px;
-    letter-spacing: -1;
 }
 
 a {
@@ -412,4 +407,8 @@ a {
 
 ::-webkit-scrollbar-thumb:horizontal {
     min-width: 10px;
+}
+
+mark {
+    background: linear-gradient(to bottom, #fff8ca 0%, #fff8ca 60%, #000000 60%, yellow 60%, yellow 100%); /* W3C */
 }
