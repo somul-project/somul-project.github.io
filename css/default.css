@@ -100,7 +100,7 @@ td {
     background: #fff8ca;
     position: relative;
 
-    max-height: 0;
+    max-height: 670px;
     transition: max-height 0.15s ease-out;
     overflow: hidden;
 }
