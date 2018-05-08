@@ -134,6 +134,7 @@ td {
 }
 
 #footer-content {
+    border-top: 1px solid;
     margin: auto;
     height: 100%;
     width: 1098px;
@@ -216,14 +217,10 @@ p.content-right-text {
 
 .content.hide {
     max-height: 0;
-    transition: max-height .4s;
-    -webkit-transition: max-height .4s;
 }
 
 .content.show {
     max-height: 670px;
-    transition: max-height .4s;
-    -webkit-transition: max-height .4s;
 }
 
 .box-img_title_content {

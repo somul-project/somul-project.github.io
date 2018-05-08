@@ -29,15 +29,8 @@ $("#header-btn-volunteer").click(function () {
     openInNewTab('http://apply.somul.kr/volunteer/');
 });
 
-var saveClicked;
-
 function changeScreen(newClicked) {
-    saveClicked = newClicked;
-    if (isAnimated) return;
-    if (clicked === newClicked) {
-        return;
-    }
-    isAnimated = 1;
+
     // change animation
     $("#menu-" + clicked).removeClass("selected");
     $("#menu-" + newClicked).addClass("selected");
@@ -45,17 +38,14 @@ function changeScreen(newClicked) {
     $("#circle-" + newClicked).addClass("selected");
 
     hideScreen(clicked);
-    setTimeout(function () {
-        showScreen(newClicked);
-    }, 400);
+    showScreen(newClicked);
 
-    setTimeout(function () {
-        isAnimated = 0;
-        clicked = newClicked;
+    if (newClicked == 2) {
         generateMap();
         setBoundsMap(true);
-        if (clicked !== saveClicked) changeScreen(saveClicked);
-    }, 800);
+    }
+    clicked = newClicked;
+
 
 }
 
