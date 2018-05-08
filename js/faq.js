@@ -22,7 +22,7 @@ var getJSON = function (url, callback) {
 function textToSmallTitle(num, text) {
     var k =
         '<div class="faq-small-title">' +
-        '<div class="faq-samll-tile-img">' +
+        '<div class="faq-samll-tile-img" id="__' + num + '">' +
         '<img style="width: 33px; height: 63px; margin: 16px 21px 16px 101px;" src="./resources/faq-bottom-' + num + '.png">' +
         '</div>' +
         '<div class="faq-small-title-text">' +
