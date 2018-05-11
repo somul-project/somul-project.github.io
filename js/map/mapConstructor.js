@@ -103,10 +103,17 @@ $(window).on("load", function () {
                 }
             }
 
-            $("#preloader").fadeOut();
-            $("#preloader-area").fadeOut();
+            var mobileKeyWords = ['iPhone', 'iPod', "BlackBerry", 'Android', 'Windows CE', 'Windows CE;', 'LG',
+                'MOT', 'SAMSUNG', 'SonyEricsson', 'Mobile', 'Symbian', 'Opera Mobi', 'Opera Mini', 'IEmobile'];
+            for (var word in mobileKeyWords) {
+                if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
+                    $("#preloader").fadeOut();
+                    $("#preloader-area").fadeOut();
 
-            $("#preload-hide").fadeIn();
+                    $("#preload-hide").fadeIn();
+                    break;
+                }
+            }
 
             generateMap();
             setBoundsMap();
