@@ -37,7 +37,6 @@ function renderByJsonUrl(url) {
                         liContent += "<a class='qna' href='#" + (sectionNum * 10) + i + "'><li>" + (i + 1) + ". " + faq[item].lists[i].name + "</li></a>";
                         content += "<a class='qna' name='" + (sectionNum * 10) + i + "'><strong><li>" + faq[item].lists[i].name + "</li></strong></a>";
                         content += "<p>" + faq[item].lists[i].content + "</p>";
-                        console.log(faq[item].lists[i].name);
                     }
                     content += "</ol>";
                 }
