@@ -98,7 +98,6 @@ $(window).on("load", function () {
             libraryData = response;
             for (var i = 0; i < libraryData.length; i++) {
                 if (libraryData[i].location.latitude === "None" || libraryData[i].location.longitude === "None") {
-                    console.log(libraryData[i]);
                     libraryData.splice(i--, 1);
                 }
             }
