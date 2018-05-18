@@ -85,7 +85,6 @@ $(window).on("load", function () {
     });
 
     $(document).on("click", ".library", function (event) {
-        console.log(1);
         $(".library").css("display", "none");
         $(".city-name").css("display", "none");
 
