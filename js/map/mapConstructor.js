@@ -60,6 +60,7 @@ function generateLibraryInfo(library) {
     );
 }
 
+
 function setBoundsMap(flag) {
     var flag = typeof flag !== 'undefined' ? flag : false;
     var bounds = new daum.maps.LatLngBounds();
@@ -73,6 +74,14 @@ function setBoundsMap(flag) {
             library.coords = new daum.maps.LatLng(library.location.latitude, library.location.longitude);
             library.city = library.location.road.split(" ")[0];
             library.marker = new daum.maps.Marker({position: library.coords});
+
+            (function (marker, lib) {
+                daum.maps.event.addListener(marker, 'click', function () {
+                    $("." + lib.city +" div")[0].click();
+                    $("input[value=" + lib.id + "]").parent().parent().trigger('click')
+                });
+            })(library.marker, library);
+
             generateLibraryInfo(library);
             library.marker.setMap(map);
         }
