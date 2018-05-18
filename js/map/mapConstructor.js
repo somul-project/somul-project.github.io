@@ -20,8 +20,8 @@ function generateMap() {
 
     map = new daum.maps.Map(container, options); // 지도 호출
 
-    map.setDraggable(false);
-    map.setZoomable(false);
+    map.setDraggable(true);
+    map.setZoomable(true);
 }
 
 function checkNull(sentence) {
