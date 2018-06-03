@@ -167,7 +167,7 @@ p.header-left-text {
     z-index: 9;
 }
 
-p.header-right-text {
+.header-right-text {
     color: #000000;
     font-family: 'Noto Sans Korean', sans-serif;
     font-weight: 300;
