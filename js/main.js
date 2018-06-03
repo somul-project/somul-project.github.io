@@ -26,7 +26,7 @@ $("#footer-btn-facebook").click(function () {
 });
 
 $("#header-btn-volunteer").click(function () {
-    openInNewTab('http://apply.somul.kr/volunteer/');
+    openInNewTab('https://codeclubkorea.org');
 });
 
 function changeScreen(newClicked) {
