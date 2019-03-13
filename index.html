@@ -56,16 +56,30 @@
     }
 
     </style>
+
+    <script type="text/javascript">
+    function closeModal(e) {
+        document.getElementById("modal").style.display = "none";
+    }
+    </script>
 </head>
 
 <body>
     <div id="modal">
         <div class="modal-content">
+            <div>
+                <a style="margin: 10px 20px; float:right" href="javascript:;" onclick="closeModal()">
+                    닫기
+                </a>
+            </div>
             <h1 style="font-weight:400; margin: 20px">5월,<br>소프트웨어에<br>물들다 : 2019</h1>
             <hr>
             <div style="padding:0px 20px">
                 <a href="http://apply.somul.kr/library/">
                     <h2 style="font-weight:400;">도서관 참여 신청 바로가기</h2>
+                </a>
+                <a href="http://somul.kr/faq">
+                    <h2 style="font-weight:400;">FAQ 바로가기</h2>
                 </a>
             </div>
         </div>
