@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>5월, 소프트웨어에 물들다.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+    <!--<link rel=”shortcut icon” href=”favicon.ico”>-->
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="googlebot" content="index,follow">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="5월, 소프트웨어에 물들다.">
+    <meta property="og:description" content="5월 27일 전국의 도서관에서 열리게 될 자원봉사자들의 소프트웨어 강연">
+    <meta property="og:image" content="http://somul.kr/resources/content-poster.png">
+    <meta property="og:url" content="http://somul.kr/"/>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css'
+          rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/mapStylesheet.css">
+    <link rel="shortcut icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="http://somul.kr/favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" language="JavaScript">
+        var mobileKeyWords = ['iPhone', 'iPod', "BlackBerry", 'Android', 'Windows CE', 'Windows CE;', 'LG',
+            'MOT', 'SAMSUNG', 'SonyEricsson', 'Mobile', 'Symbian', 'Opera Mobi', 'Opera Mini', 'IEmobile'];
+        for (var word in mobileKeyWords) {
+            if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
+                window.location.href = "http://somul.kr/mobile/";
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div id="header-content">
+            <div id="header-content-left">
+                <div class="header-btn">
+                    <div id="circle-1" style="left: 28.608px" class="circle selected"></div>
+                    <p id="menu-1" class="header-left-text selected">소물이란?</p>
+                </div>
+                <div class="header-btn">
+                    <div id="circle-2" style="left: 161.139px" class="circle"></div>
+                    <p id="menu-2" class="header-left-text">도서관정보</p>
+                </div>
+                <div class="header-btn">
+                    <div id="circle-3" style="left: 305.885px" class="circle"></div>
+                    <p id="menu-3" class="header-left-text">후원안내</p>
+                </div>
+                <div class="header-btn">
+                    <div id="circle-4" style="left: 452.882px" class="circle"></div>
+                    <p id="menu-4" class="header-left-text" style="font-size: 16px;">FAQ</p>
+                </div>
+                <!--
+                <img style="width: 137px; height: 105px" src="./resources/header-main.png">
+                <img style="width: 137px; height: 105px" src="./resources/header-libraray.png">
+                <img style="width: 137px; height: 105px" src="./resources/header-donate.png">
+                <img style="width: 137px; height: 105px" src="./resources/header-FAQ.png">
+            -->
+            </div>
+            <div id="header-content-middle">
+
+            </div>
+            <div id="header-btn-volunteer" class="header-btn-right" style="cursor: pointer">
+
+                <p class="header-right-text">with 코드클럽 한국위원회</p>
+                <div style="display: table-cell; vertical-align: middle; position: relative">
+                    <img style="width: 30px; height: 30px;cursor:pointer;"
+                         src="./resources/34117540_1689520614495101_4028904044926861312_n.png">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="header-blank" style="width: 100%;height: 105px;"></div>
+
+    <div id="content-main" class="content hide">
+        <div class="content-half">
+            <img style="width: 549px; height: 670px" src="./resources/content-poster.png">
+        </div>
+        <div class="content-half">
+            <div style="width:549px; height: 410px">
+                <img style="width: 549px; height: 410px" src="./resources/content-logo.png">
+            </div>
+            <div style="width:549px; height: 260px">
+                <p style="width: 375px; margin:auto; margin-top: 27px;" class="content-right-text">소프트웨어에 물들다는 전국의 도서관에서
+                    소프트웨어를 주제로 한날 한시에 진행되는 강연 프로젝트입니다. 2018년에는 39개 도서관에서 진행됩니다. 강연을 듣고 싶으시면 해당 도서관으로
+                    문의하시면 됩니다. 5월 소물에 많은 관심과 참여 부탁드립니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-library" class="content hide" style="width:100%">
+        <div class="list-wrapper">
+            <div class="library-list-header">
+                <img class="icon-back" src="./resources/icon/back.png" alt="뒤로가기" onclick="goBack()">
+                <p>원하는 지역을 선택해주세요.</p>
+            </div>
+            <div class="library-list"></div>
+        </div>
+        <div id="mapview"></div>
+    </div>
+
+    <div id="content-donate" class="content hide">
+        <div class="content-half">
+            <img style="width: 549px; height: 670px" src="./resources/donate-poster.png">
+        </div>
+        <div class="content-half">
+            <div style="width:513; height: 205px; padding: 32px 18px">
+                <p class="donate" style="margin-bottom: 32px;">늘 그렇듯이 이런 행사에는 산업체, 개인들의 열화와 같은 지지,
+                    <br>그리고 물심양면의 후원이 필요합니다.
+                </p>
+                <p class="donate" style="margin-bottom: 32px;">아주 작은 후원이라도 감사히 생각하며 개인, 회사, 기관의
+                    <br> 소중한 후원이 우리의 미래를 밝게 할 것입니다.
+                </p>
+                <p class="donate">또한 후원사들의 명단 & 로고를 널리 알려
+                    <br> 이 소중한 행사에 같이 해주심을 기억하겠습니다.</p>
+            </div>
+            <div style="width:549px; height: 360px;">
+                <h2 class="donate">주소 및 연락처</h2>
+
+                <div style="display: table; height: 55px; overflow: hidden;">
+                    <img style="width: 34px; height: 34px; margin: 0 17px 10.5px 38px;"
+                         src="./resources/icon-pin.png">
+                    <div class="vcenter">
+                        <div style="float:left; width: 132px;">
+                            <p class="plane-text" style="font-weight:600">물품 발송 주소</p>
+                        </div>
+                    </div>
+                    <div class="vcenter">
+                        <div style="float:left">
+                            <p class="plane-text">서울 성북구 정릉로 77 국민대학교 7호관 615호
+                                <br>소프트웨어에 물들다 담당자(우편번호 02707)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: table; height: 70px; overflow: hidden;">
+                    <img style="width: 34px; height: 34px; margin: 0 17px 17px 38px;"
+                         src="./resources/icon-email.png">
+                    <div class="vcenter">
+                        <div style="float:left; width: 132px;">
+                            <p class="plane-text" style="font-weight:600">관계자 이메일</p>
+                        </div>
+                    </div>
+                    <div class="vcenter">
+                        <div style="float:left">
+                            <p class="plane-text">somul.may@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: table; height: 70px; overflow: hidden;">
+                    <img style="width: 34px; height: 34px; margin: 0 17px 17px 38px;"
+                         src="./resources/icon-donate.png">
+                    <div class="vcenter">
+                        <div style="float:left; width: 132px;">
+                            <p class="plane-text" style="font-weight:600">현금 후원 안내</p>
+                        </div>
+                    </div>
+                    <div class="vcenter">
+                        <div style="float:left">
+                            <p class="plane-text">후원하신 현금은 강의 진행에 필요한 소모품, 장비 및 기타 경비,
+                                우편료, 도메인 유지비, 행사 후 뒤풀이 비용 등으로 사용됩니다.<br>
+                                <mark>현금 후원의 경우, 사단법인 코드클럽한국위원회 명의의 기부금 영수증을 발행해드립니다.
+                                    자세한 내용은 관계자 메일로 문의 부탁드립니다.
+                                </mark>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div style="display: table; height: 96px; overflow: hidden;">
+                    <img style="width: 34px; height: 34px; margin: 0 17px 34.5px 38px;"
+                         src="./resources/icon-gift.png">
+                    <div class="vcenter">
+                        <div style="float:left; width: 132px;">
+                            <p class="plane-text" style="font-weight:600">뒤풀이 행사의 경품</p>
+                        </div>
+                    </div>
+                    <div class="vcenter">
+                        <div style="float:left">
+                            <p class="plane-text">역사 책, 공연 티켓, 상품권, 소소한 회사 기념품 등
+                                <br>(대부분 자원봉사자는 고등학생 이상임을 감안해 주세요)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="content-faq" class="content show" style="overflow-y:scroll; float: none;">
+        <div style="width: 100%; height: 169px;">
+            <img style="width: 816px; height: 125px; margin: 22px 141px 22px 141px;"
+                 src="./resources/faq-logo.png">
+        </div>
+        <div id="faq-card-wrapper">
+            <a href="#__1">
+                <div class="faq-card">
+                    <div class="faq-card-img">
+                        <img style="width: 69px; height: 120px; margin: 32px 103px 32px 103px;"
+                             src="./resources/faq-top-1.png">
+                    </div>
+
+                    <div class="faq-card-text">
+                        <div class="vcenter">
+                            <img style="height: 27px; margin: 0 68.78221px;" src="./resources/faq-top-t1.png">
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#__2">
+                <div class="faq-card">
+                    <div class="faq-card-img">
+                        <img style="width: 69px; height: 120px; margin: 32px 103px 32px 103px;"
+                             src="./resources/faq-top-2.png">
+                    </div>
+                    <div class="faq-card-text">
+                        <div class="vcenter">
+                            <img style="height: 27px; margin: 0 45.5px;" src="./resources/faq-top-t2.png">
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#__3">
+                <div class="faq-card">
+                    <div class="faq-card-img">
+                        <img style="width: 69px; height: 120px; margin: 32px 103px 32px 103px;"
+                             src="./resources/faq-top-3.png">
+                    </div>
+                    <div class="faq-card-text">
+                        <div class="vcenter">
+                            <img style="height: 27px; margin: 0 73.115px;" src="./resources/faq-top-t3.png">
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#__4">
+                <div class="faq-card">
+                    <div class="faq-card-img">
+                        <img style="width: 69px; height: 120px; margin: 32px 103px 32px 103px;"
+                             src="./resources/faq-top-4.png">
+                    </div>
+                    <div class="faq-card-text">
+                        <div class="vcenter">
+                            <img style="height: 27px; margin: 0 73.115px;" src="./resources/faq-top-t4.png">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="width: 1102px; height: 46px;"></div>
+        <div id="link-content"></div>
+        <div id="faq-content"></div>
+        <div style="width: 1102px; height: 46px;"></div>
+    </div>
+
+    <div id="footer">
+        <div id="footer-content">
+            <div id="footer-content-middle">
+                <img id="footer-btn-youtube" style="width: 32px; height: 25px; margin: 14px auto; cursor:pointer;"
+                     src="./resources/footer-youtube.png">
+                <img id="footer-btn-facebook" style="width: 32px; height: 25px; margin: 14px auto; cursor:pointer;"
+                     src="./resources/footer-facebook.png">
+            </div>
+            <div id="footer-content-prev" style="padding: 14px; float: right;">
+                <a style="color:black">지난 소물 보기 :&nbsp;</a>
+                <a href="http://somul.kr/previous/2016_oct/index.html">2016년 10월</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+                    href="http://somul.kr/previous/2017_may/index.html">2017년 5월</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=172283aea22a2859764d0f5c96a12445&libraries=services"></script>
+<script src="./js/map/mapConstructor.js"></script>
+<script src="./js/map/mapControlList.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+<script src="./js/faq.js"></script>
+
+</html>
