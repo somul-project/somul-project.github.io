@@ -29,6 +29,10 @@ $("#header-btn-volunteer").click(function () {
     openInNewTab('https://codeclubkorea.org');
 });
 
+$(document).ready(() => {
+    changeScreen(2);
+});
+
 function changeScreen(newClicked) {
 
     // change animation
